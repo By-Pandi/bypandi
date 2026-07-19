@@ -97,6 +97,45 @@ body {
   margin-bottom: 10px;
 }
 
+.row-ceramic:hover .entry-name,
+.row-ceramic:hover .entry-link {
+  color: #e07a5f;
+  font-size: 1.05em;
+}
+
+.row-sibol:hover .entry-name,
+.row-sibol:hover .entry-link {
+  color: #5f9ee0;
+  font-size: 1.05em;
+}
+
+.row-fanzine:hover .entry-name,
+.row-fanzine:hover .entry-link {
+  color: #e07a5f;
+  font-size: 1.05em;
+}
+
+.row-andiamo:hover .entry-name,
+.row-andiamo:hover .entry-link {
+  color: #e07a5f;
+  font-size: 1.05em;
+}
+
+.row-michelin:hover .entry-name,
+.row-michelin:hover .entry-link {
+  color: #e07a5f;
+  font-size: 1.05em;
+}
+
+.row-presto:hover .entry-name,
+.row-presto:hover .entry-link {
+  color: #e07a5f;
+  font-size: 1.05em;
+}
+
+transition: color 0.2s ease, font-size 0.2s ease;
+
+
 .entry-name {
   white-space: nowrap;
 }
