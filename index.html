@@ -59,9 +59,9 @@
 
     <!-- The "receipt header" row: date · timezone · time -->
     <div class="meta-row">
-      <span>July 19, 2026</span>
-      <span>CET (UTC+1)</span>
-      <span>14:46</span>
+      <span id="live-date"></span>
+      <span id="live-tz"></span>
+      <span id="live-time"></span>
     </div>
 
     <div class="rule"></div>
@@ -164,6 +164,24 @@
     <h2 class="thanks">Thanks and all that &lt;3</h2>
 
   </main>
+
+  <script>
+  const now = new Date();
+
+  // Format the date, e.g. "July 19, 2026"
+  document.getElementById('live-date').textContent = now.toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric'
+  });
+
+  // Format the time, e.g. "14:46"
+  document.getElementById('live-time').textContent = now.toLocaleTimeString('en-GB', {
+    hour: '2-digit', minute: '2-digit'
+  });
+
+  // Show the visitor's timezone abbreviation (browser figures this out automatically)
+  document.getElementById('live-tz').textContent =
+    Intl.DateTimeFormat().resolvedOptions().timeZone;
+</script>
 
 </body>
 </html>
