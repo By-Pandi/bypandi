@@ -33,8 +33,12 @@ body {
   padding: 40px 28px;
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
 }
-.logo-row {
+
+.logo {
+  display: flex;
   justify-content: center;
+  margin-bottom: 12px;
+}
 
 .logo img {
   width: 30%;
