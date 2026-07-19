@@ -100,37 +100,37 @@ body {
 .row-ceramic:hover .entry-name,
 .row-ceramic:hover .entry-link {
   color: #e07a5f;
-  font-size: 1.05em;
+  transform: scale(1.05);
 }
 
 .row-sibol:hover .entry-name,
 .row-sibol:hover .entry-link {
   color: #5f9ee0;
-  font-size: 1.05em;
+  transform: scale(1.05);
 }
 
 .row-fanzine:hover .entry-name,
 .row-fanzine:hover .entry-link {
   color: #e07a5f;
-  font-size: 1.05em;
+  transform: scale(1.05);
 }
 
 .row-andiamo:hover .entry-name,
 .row-andiamo:hover .entry-link {
   color: #e07a5f;
-  font-size: 1.05em;
+  transform: scale(1.05);
 }
 
 .row-michelin:hover .entry-name,
 .row-michelin:hover .entry-link {
   color: #e07a5f;
-  font-size: 1.05em;
+  transform: scale(1.05);
 }
 
 .row-presto:hover .entry-name,
 .row-presto:hover .entry-link {
   color: #e07a5f;
-  font-size: 1.05em;
+  transform: scale(1.05);
 }
 
 transition: color 0.2s ease, font-size 0.2s ease;
