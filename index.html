@@ -61,7 +61,6 @@
     <div class="meta-row">
       <span id="live-date"></span>
       <span id="live-tz"></span>
-      <span id="live-time"></span>
     </div>
 
     <div class="rule"></div>
@@ -181,9 +180,6 @@
     hour: '2-digit', minute: '2-digit'
   });
 
-  // Show the visitor's timezone abbreviation (browser figures this out automatically)
-  document.getElementById('live-tz').textContent =
-    Intl.DateTimeFormat().resolvedOptions().timeZone;
 </script>
 
 </body>
