@@ -1,0 +1,158 @@
+/*
+  This file controls how everything LOOKS.
+  index.html has the content and structure;
+  this file has the colors, fonts, spacing, and layout.
+  Every selector below (the name before the { ) matches a
+  class or tag used in index.html.
+*/
+
+/* Reset some default browser spacing so we start from a clean slate */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* A monospace font is what makes this feel like a printed receipt.
+     The browser tries each font in order until it finds one installed. */
+  font-family: "JetBrains Mono", "IBM Plex Mono", "Courier New", monospace;
+  background: #f2f2f0;
+  color: #111111;
+  display: flex;
+  justify-content: center;
+  padding: 48px 16px;
+  line-height: 1.5;
+}
+
+/* The narrow "paper" column everything sits inside */
+.receipt {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 40px 28px;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.intro {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+.intro p {
+  margin-bottom: 2px;
+}
+
+/* The dashed divider line, reused between every section */
+.rule {
+  border-top: 1px dashed #bbb;
+  margin: 20px 0;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.section-label {
+  text-align: center;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+/* Each line item: name on the left, link+arrow on the right.
+   "flex" + "space-between" is what pushes them to opposite edges. */
+.entry-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.entry-name {
+  white-space: nowrap;
+}
+
+.entry-link {
+  color: #111;
+  text-align: right;
+  text-decoration: none;
+}
+
+.entry-link:hover {
+  text-decoration: underline;
+}
+
+/* The bolder "TOTAL" row, styled to stand out like a receipt total */
+.total-row {
+  font-weight: 700;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #111;
+}
+
+/* Row of small ASCII-art blocks, evenly spaced */
+.ascii-row {
+  display: flex;
+  justify-content: space-around;
+  margin: 24px 0;
+}
+
+.ascii-art {
+  font-size: 0.55rem;
+  line-height: 1.1;
+  color: #333;
+  white-space: pre;
+}
+
+.contact-block {
+  text-align: center;
+  font-size: 0.85rem;
+  margin-bottom: 32px;
+}
+
+.contact-block p {
+  margin-bottom: 4px;
+}
+
+.contact-block a {
+  color: #111;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+.thanks {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+/* On small screens, tighten the padding a bit */
+@media (max-width: 480px) {
+  .receipt {
+    padding: 28px 18px;
+  }
+}

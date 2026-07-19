@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fat Cat — Creative Journey</title>
+
+  <!-- Connects this page to the styling file sitting next to it -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--
+    Everything lives inside one narrow "receipt" column.
+    That's the whole visual trick of this design: a fixed
+    narrow width + monospace font + dashed lines = looks like
+    a printed ticket, even though it's just a normal webpage.
+  -->
+  <main class="receipt">
+
+    <!-- LOGO: a simple hand-drawn-looking panda face, pure SVG (no image file needed) -->
+    <div class="logo">
+      <svg viewBox="0 0 200 160" width="120" height="96" xmlns="http://www.w3.org/2000/svg">
+        <!-- ears -->
+        <circle cx="45" cy="35" r="26" fill="#111"/>
+        <circle cx="155" cy="35" r="26" fill="#111"/>
+        <!-- head -->
+        <ellipse cx="100" cy="90" rx="78" ry="62" fill="none" stroke="#111" stroke-width="6"/>
+        <!-- eye patches -->
+        <ellipse cx="65" cy="85" rx="22" ry="26" fill="#111"/>
+        <ellipse cx="135" cy="85" rx="22" ry="26" fill="#111"/>
+        <!-- X eyes (the "dead panda" cute look) -->
+        <g stroke="#fff" stroke-width="4" stroke-linecap="round">
+          <line x1="56" y1="76" x2="74" y2="94"/>
+          <line x1="74" y1="76" x2="56" y2="94"/>
+          <line x1="126" y1="76" x2="144" y2="94"/>
+          <line x1="144" y1="76" x2="126" y2="94"/>
+        </g>
+        <!-- nose + mouth -->
+        <ellipse cx="100" cy="112" rx="8" ry="6" fill="#111"/>
+        <path d="M100 118 Q100 132 85 128" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+        <path d="M100 118 Q100 132 115 128" fill="none" stroke="#111" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </div>
+
+    <!-- MAIN TITLE — replace "Title" with your name or brand -->
+    <h1 class="title">Title</h1>
+
+    <!-- INTRO BLOCK — the short lines describing you -->
+    <div class="intro">
+      <p>Creative Journey</p>
+      <p>B.A Industrial Design</p>
+      <p>multidisciplinary, maker, designer</p>
+      <p>Fat Cat, München 2026</p>
+    </div>
+
+    <!-- A dashed horizontal line. Reused everywhere as a divider. -->
+    <div class="rule"></div>
+
+    <!-- The "receipt header" row: date · timezone · time -->
+    <div class="meta-row">
+      <span>July 19, 2026</span>
+      <span>CET (UTC+1)</span>
+      <span>14:46</span>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- SECTION: The artsy -->
+    <p class="section-label">— The artsy —</p>
+
+    <!--
+      Each "entry-row" is one line item: a name on the left,
+      a link with an arrow on the right. Copy this whole
+      <div class="entry-row">...</div> block to add more items.
+    -->
+    <div class="entry-row">
+      <span class="entry-name">## ceramic world</span>
+      <a href="#" class="entry-link">candledancers, ayezz, and more →</a>
+    </div>
+    <div class="entry-row">
+      <span class="entry-name">## sibol</span>
+      <a href="#" class="entry-link">upcycling project →</a>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- SECTION: With purpose -->
+    <p class="section-label">— With purpose —</p>
+
+    <div class="entry-row">
+      <span class="entry-name">## B.C.A.</span>
+      <a href="#" class="entry-link">fanzine &amp; urbanism →</a>
+    </div>
+    <div class="entry-row">
+      <span class="entry-name">## ANDIAMO</span>
+      <a href="#" class="entry-link">B.A. thesis 2023 →</a>
+    </div>
+    <div class="entry-row">
+      <span class="entry-name">## AGORA</span>
+      <a href="#" class="entry-link">1st Prize Michelin Movin'On 2022 →</a>
+    </div>
+    <div class="entry-row">
+      <span class="entry-name">## PRESTO</span>
+      <a href="#" class="entry-link">top 10 Vidrala Masterglass 2022 →</a>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- SECTION: Work in progress -->
+    <p class="section-label">— Work in progress —</p>
+
+    <div class="entry-row">
+      <span class="entry-name">Oven on the table</span>
+      <a href="#" class="entry-link">Conceptual, ceramic 3D printing, performance →</a>
+    </div>
+
+    <!-- The "TOTAL" row, styled bolder like a real receipt total -->
+    <div class="entry-row total-row">
+      <span class="entry-name">TOTAL</span>
+      <span class="entry-link">tbd</span>
+    </div>
+
+    <!--
+      Decorative ASCII-art blocks, just for texture, like a
+      printed barcode/stamp on a receipt. Pure text characters,
+      no image file needed. Feel free to swap the characters
+      for your own pattern, or delete this whole div.
+    -->
+    <div class="ascii-row">
+      <pre class="ascii-art">
+ .####.
+#......#
+#.####.#
+#.#  #.#
+#.####.#
+ '####'
+      </pre>
+      <pre class="ascii-art">
+  /\/\
+ ( o.o )
+  &gt;   &lt;
+ /|   |\
+      </pre>
+      <pre class="ascii-art">
+ [||||]
+ [||||]
+ [||||]
+ [||||]
+      </pre>
+    </div>
+
+    <div class="rule"></div>
+
+    <!-- SECTION: Get in touch -->
+    <p class="section-label">— Get in touch —</p>
+
+    <div class="contact-block">
+      <p><a href="mailto:hello@by-pandi.com">hello@by-pandi.com</a></p>
+      <p><a href="#">@made.by.pandi</a></p>
+      <p><a href="#">Behance</a></p>
+    </div>
+
+    <h2 class="thanks">Thanks and all that &lt;3</h2>
+
+  </main>
+
+</body>
+</html>
