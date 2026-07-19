@@ -34,12 +34,11 @@ body {
   box-shadow: 0 2px 24px rgba(0, 0, 0, 0.06);
 }
 
-.logo {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 12px;
+.logo img {
+  width: 30%;
+  max-width: 120px;
+  height: auto;
 }
-
 .title {
   font-family: "DM Sans", sans-serif;
   text-align: center;
@@ -117,15 +116,14 @@ body {
 /* Row of small ASCII-art blocks, evenly spaced */
 .ascii-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   margin: 24px 0;
 }
 
-.ascii-art {
-  font-size: 0.55rem;
-  line-height: 1.1;
-  color: #333;
-  white-space: pre;
+.ascii-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
 }
 
 .contact-block {
