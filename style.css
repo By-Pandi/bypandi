@@ -23,6 +23,11 @@ body {
   justify-content: center;
   padding: 48px 16px;
   line-height: 1.5;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* The narrow "paper" column everything sits inside */
@@ -201,5 +206,8 @@ transition: color 0.2s ease, font-size 0.2s ease;
 @media (max-width: 480px) {
   .receipt {
     padding: 28px 18px;
+  }
+  .title {
+    font-size: 1.5rem;
   }
 }
