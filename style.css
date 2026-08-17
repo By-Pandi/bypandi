@@ -210,4 +210,14 @@ transition: color 0.2s ease, font-size 0.2s ease;
   .title {
     font-size: 1.5rem;
   }
+
+  .entry-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .entry-link {
+    text-align: left;
+  }
 }
