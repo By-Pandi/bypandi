@@ -1,0 +1,215 @@
+/*
+  pages.css — used by every page EXCEPT index.html.
+  Same fonts and monospace feel as your homepage, but laid out
+  as a normal wide page instead of a narrow receipt card.
+*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "JetBrains Mono", "IBM Plex Mono", "Courier New", monospace;
+  background: #ffffff;
+  color: #111111;
+  line-height: 1.6;
+  padding: 48px 24px;
+}
+
+/* The main content column — wider than the receipt, left-aligned */
+.page-wrap {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Small back-to-home link, top of every subpage */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.page-header .site-name {
+  font-size: 0.85rem;
+}
+
+.page-header img {
+  height: 32px;
+  width: auto;
+}
+
+.page-header .back-link {
+  margin-bottom: 0;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #111;
+  text-decoration: none;
+  margin-bottom: 32px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Page title, same DM Sans bold as the homepage title */
+.page-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.page-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.page-body {
+  font-size: 0.95rem;
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.page-body p {
+  margin-bottom: 16px;
+}
+
+/* Simple horizontal rule, thinner/plainer than the receipt's dashed one */
+.page-rule {
+  border-top: 1px solid #eee;
+  margin: 32px 0;
+}
+
+/* Gallery grid for project photos */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*
+  ARCHIVE PAGES — shared by every "numbered gallery" page
+  (ceramic-archive.html, fanzine-archive.html, etc).
+  This is the reusable shell: doodle image + number nav + scroll behavior.
+  What goes INSIDE each numbered section is up to that specific page.
+*/
+
+.archive-tag {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.archive-divider {
+  border-top: 1px dashed #bbb;
+  margin: 16px 0;
+}
+
+.archive-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  text-align: center;
+  margin: 8px 0;
+}
+
+.archive-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+  margin: 16px 0;
+}
+
+.archive-doodle {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 24px auto;
+  display: block;
+}
+
+.archive-general-label {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  margin: 12px 0;
+}
+
+.archive-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  padding-bottom: 24px;
+  margin-bottom: 40px;
+}
+
+.archive-nav a {
+  color: #111;
+  text-decoration: none;
+}
+
+.archive-nav a:hover {
+  text-decoration: underline;
+}
+
+.archive-nav .sep {
+  color: #bbb;
+}
+
+/* Each numbered project block. Content inside is free-form per page. */
+.archive-section {
+  padding-top: 24px;
+  margin-bottom: 48px;
+  border-top: 1px solid #eee;
+}
+
+.archive-section-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.archive-caption {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 6px;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .page-title {
+    font-size: 1.6rem;
+  }
+  body {
+    padding: 32px 18px;
+  }
+  .archive-nav {
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+}
