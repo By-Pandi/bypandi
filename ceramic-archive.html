@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceramic Archive — By Pandi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="pages.css">
+</head>
+<body>
+
+  <div class="page-wrap">
+
+    <header class="page-header">
+      <span class="site-name">By Pandi</span>
+      <img src="images/logo.jpg" alt="By Pandi logo">
+      <a href="index.html" class="back-link">← back to everything</a>
+    </header>
+    <p class="page-meta">A running record of everything made in clay.</p>
+
+    <!--
+      DOODLE IMAGE
+      One static image, drawn once. Doesn't change per project.
+      Replace the src below with your actual doodle-table illustration.
+    -->
+    <img src="images/ceramic-doodle.jpg" alt="Illustrated table of numbered ceramic pieces" class="archive-doodle">
+
+    <!--
+      NUMBER NAV
+      Each number is a jump link to the matching #section-N below.
+      Add or remove <a> tags here as your number of pieces grows —
+      just make sure the number matches an id further down the page.
+    -->
+    <nav class="archive-nav">
+      <a href="#section-1">1</a>
+      <a href="#section-2">2</a>
+      <a href="#section-3">3</a>
+      <a href="#section-4">4</a>
+      <a href="#section-5">5</a>
+      <a href="#section-6">6</a>
+      <a href="#section-7">7</a>
+      <a href="#section-8">8</a>
+    </nav>
+
+    <!--
+      SECTIONS
+      One block per number. Each id must match its number nav link
+      exactly (id="section-3" pairs with href="#section-3").
+      Everything INSIDE a section is free-form — one photo, four
+      photos, a caption, no caption, whatever that piece needs.
+    -->
+
+    <div class="archive-section" id="section-1">
+      <p class="archive-section-title">Coaster set</p>
+      <img src="images/ceramic-1.jpg" alt="Coaster set" style="width: 100%; max-width: 400px; height: auto;">
+      <p class="archive-caption">Stoneware, glazed, 2026.</p>
+    </div>
+
+    <div class="archive-section" id="section-2">
+      <p class="archive-section-title">Ceramic shelves</p>
+      <div class="gallery-grid">
+        <img src="images/ceramic-2a.jpg" alt="Ceramic shelves, view 1">
+        <img src="images/ceramic-2b.jpg" alt="Ceramic shelves, view 2">
+      </div>
+    </div>
+
+    <div class="archive-section" id="section-3">
+      <p class="archive-section-title">Feel good</p>
+      <img src="images/ceramic-3.jpg" alt="Feel good piece" style="width: 100%; max-width: 400px; height: auto;">
+    </div>
+
+    <div class="archive-section" id="section-4">
+      <p class="archive-section-title">Upties</p>
+      <div class="gallery-grid">
+        <img src="images/ceramic-4a.jpg" alt="Upties, view 1">
+        <img src="images/ceramic-4b.jpg" alt="Upties, view 2">
+        <img src="images/ceramic-4c.jpg" alt="Upties, view 3">
+        <img src="images/ceramic-4d.jpg" alt="Upties, view 4">
+      </div>
+    </div>
+
+    <div class="archive-section" id="section-5">
+      <p class="archive-section-title">Bowls</p>
+      <img src="images/ceramic-5.jpg" alt="Bowls" style="width: 100%; max-width: 400px; height: auto;">
+    </div>
+
+    <div class="archive-section" id="section-6">
+      <p class="archive-section-title">Tiles</p>
+      <div class="gallery-grid">
+        <img src="images/ceramic-6a.jpg" alt="Tiles, view 1">
+        <img src="images/ceramic-6b.jpg" alt="Tiles, view 2">
+      </div>
+    </div>
+
+    <div class="archive-section" id="section-7">
+      <p class="archive-section-title">Arch stands</p>
+      <img src="images/ceramic-7.jpg" alt="Arch stands" style="width: 100%; max-width: 400px; height: auto;">
+    </div>
+
+    <div class="archive-section" id="section-8">
+      <p class="archive-section-title">General</p>
+      <div class="gallery-grid">
+        <img src="images/ceramic-8a.jpg" alt="General view 1">
+        <img src="images/ceramic-8b.jpg" alt="General view 2">
+      </div>
+    </div>
+
+    <a href="index.html" class="back-link">← back to everything</a>
+
+  </div>
+
+</body>
+</html>
