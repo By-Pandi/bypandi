@@ -25,13 +25,15 @@ document.querySelectorAll('.pager').forEach(function (pager) {
   let index = 0;
 
   const imageEl = pager.querySelector('.pager-image');
-  const prevBtn = pager.querySelector('.pager-prev');
-  const nextBtn = pager.querySelector('.pager-next');
 
   // The counter paragraph is expected right after the pager div
   const counterWrap = pager.nextElementSibling;
   const currentEl = counterWrap ? counterWrap.querySelector('.pager-current') : null;
   const totalEl = counterWrap ? counterWrap.querySelector('.pager-total') : null;
+
+  // Buttons might be inside .pager, or moved into the counter row next to it
+  const prevBtn = pager.querySelector('.pager-prev') || (counterWrap && counterWrap.querySelector('.pager-prev'));
+  const nextBtn = pager.querySelector('.pager-next') || (counterWrap && counterWrap.querySelector('.pager-next'));
 
   function update() {
     imageEl.src = images[index];
