@@ -224,9 +224,10 @@ body {
 
 /* Photos stacked vertically, e.g. for a tall sequence */
 .gallery-stack img {
-  width: 100%;
-  max-width: 420px;
+  width: auto;
+  max-height: 420px;
   height: auto;
+  max-width: 100%;
   display: block;
   margin: 0 auto 20px auto;
 }
