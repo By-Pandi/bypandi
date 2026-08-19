@@ -129,7 +129,7 @@ body {
    for the one divider under the tag line, or anywhere you want a
    stronger break instead of the usual dashed rule. */
 .archive-divider-solid {
-  border-top: 1px solid #111;
+  border-top: 1px solid #666;
   margin: 16px 0;
 }
 
