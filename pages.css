@@ -159,10 +159,10 @@ body {
 .archive-nav {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  font-size: 0.85rem;
+  gap: 28px;
+  font-size: 0.9rem;
   padding-bottom: 24px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .archive-nav a {
@@ -174,8 +174,68 @@ body {
   text-decoration: underline;
 }
 
+.archive-nav a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
 .archive-nav .sep {
   color: #bbb;
+}
+
+/*
+  Panels: one per project number. Hidden by default, shown when
+  its matching number is clicked. Content inside each is free-form —
+  use the helper classes below, or write custom layout per panel.
+*/
+.gallery-panel {
+  display: none;
+}
+
+.gallery-panel.active {
+  display: block;
+}
+
+/* A single centered photo */
+.gallery-single {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.gallery-single img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Three photos in a row (falls back to 1 column on phones automatically,
+   since it shares the same @media rule as .gallery-grid below) */
+.gallery-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gallery-grid-3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Photos stacked vertically, e.g. for a tall sequence */
+.gallery-stack img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.gallery-caption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 8px;
 }
 
 /* Each numbered project block. Content inside is free-form per page. */
@@ -199,7 +259,8 @@ body {
 }
 
 @media (max-width: 600px) {
-  .gallery-grid {
+  .gallery-grid,
+  .gallery-grid-3 {
     grid-template-columns: 1fr;
   }
   .page-title {
@@ -244,9 +305,12 @@ body {
 }
 
 .pager-image {
-  max-width: 550px;
-  width: 100%;
+  max-width: 100%;
+  max-height: 65vh;
+  width: auto;
   height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .pager-prev,
@@ -254,7 +318,7 @@ body {
   background: none;
   border: none;
   font-size: 1.4rem;
-  color: #111;
+  color: #d99a7c;
   cursor: pointer;
   padding: 8px;
 }
@@ -267,11 +331,6 @@ body {
 .pager-counter {
   text-align: center;
   font-size: 0.85rem;
-  color: #666;
+  color: #4a7fd9;
   margin-bottom: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
 }
