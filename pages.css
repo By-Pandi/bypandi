@@ -161,8 +161,8 @@ body {
   justify-content: center;
   gap: 28px;
   font-size: 0.9rem;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .archive-nav a {
