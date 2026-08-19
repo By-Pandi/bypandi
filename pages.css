@@ -244,7 +244,7 @@ body {
 }
 
 .pager-image {
-  max-width: 380px;
+  max-width: 550px;
   width: 100%;
   height: auto;
 }
@@ -254,7 +254,7 @@ body {
   background: none;
   border: none;
   font-size: 1.4rem;
-  color: #d99a7c;
+  color: #111;
   cursor: pointer;
   padding: 8px;
 }
@@ -267,6 +267,6 @@ body {
 .pager-counter {
   text-align: center;
   font-size: 0.85rem;
-  color: #4a7fd9;
+  color: #666;
   margin-bottom: 24px;
 }
