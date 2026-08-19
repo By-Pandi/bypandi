@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>By Pandi — Ceramic Archive</title>
+  <title>Ceramic Archive — By Pandi</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,7 +41,7 @@
       One static image, drawn once. Doesn't change per project.
       Replace the src below with your actual doodle-table illustration.
     -->
-    <img src="images/ceramica-doodle.jpg" alt="Illustrated table of numbered ceramic pieces" class="archive-doodle">
+    <img src="images/ceramic-doodle.jpg" alt="Illustrated table of numbered ceramic pieces" class="archive-doodle">
 
     <div class="archive-divider"></div>
 
@@ -51,37 +51,45 @@
 
     <!--
       NUMBER NAV
-      Each number is a jump link to the matching #section-N below.
-      Add or remove <a> + <span class="sep">|</span> pairs as your
-      number of pieces grows — just make sure the number matches an
-      id further down the page.
+      Clicking a number shows that project's panel below — nothing
+      scrolls, every other panel stays hidden. Add more <a> tags
+      here as you add more numbered panels below.
     -->
     <nav class="archive-nav">
-      <a href="#section-1">1</a><span class="sep">|</span>
-      <a href="#section-2">2</a><span class="sep">|</span>
-      <a href="#section-3">3</a><span class="sep">|</span>
-      <a href="#section-4">4</a><span class="sep">|</span>
-      <a href="#section-5">5</a><span class="sep">|</span>
-      <a href="#section-6">6</a><span class="sep">|</span>
-      <a href="#section-7">7</a><span class="sep">|</span>
-      <a href="#section-8">8</a>
+      <a href="#" data-project="1">1</a>
+      <a href="#" data-project="2">2</a>
+      <a href="#" data-project="3">3</a>
+      <a href="#" data-project="4">4</a>
+      <a href="#" data-project="5">5</a>
+      <a href="#" data-project="6">6</a>
+      <a href="#" data-project="7">7</a>
+      <a href="#" data-project="8">8</a>
     </nav>
 
+    <div class="archive-divider"></div>
+
     <!--
-      SECTIONS
-      One block per number. Each id must match its number nav link
-      exactly (id="section-3" pairs with href="#section-3").
-      Everything INSIDE a section is free-form — one photo, four
-      photos, a caption, no caption, whatever that piece needs.
+      PANELS
+      One per number. Only the active one is visible at a time.
+      Arrange the inside of each however that project needs — a
+      single photo, a grid, a caption, whatever fits. Mix and match
+      the helper classes (.gallery-single, .gallery-grid,
+      .gallery-grid-3, .gallery-stack) or write your own layout.
+
+      TO ADD A NEW NUMBER LATER: copy one whole panel block, change
+      data-project to the new number, swap the content inside, and
+      add one matching <a> in the nav above.
     -->
 
-    <div class="archive-section" id="section-1">
+    <div class="gallery-panel" data-project="1">
       <p class="archive-section-title">Coaster set</p>
-      <img src="images/ceramic-1.jpg" alt="Coaster set" style="width: 100%; max-width: 400px; height: auto;">
-      <p class="archive-caption">Stoneware, glazed, 2026.</p>
+      <div class="gallery-single">
+        <img src="images/ceramic-1.jpg" alt="Coaster set">
+      </div>
+      <p class="gallery-caption">Stoneware, glazed, 2026.</p>
     </div>
 
-    <div class="archive-section" id="section-2">
+    <div class="gallery-panel" data-project="2">
       <p class="archive-section-title">Ceramic shelves</p>
       <div class="gallery-grid">
         <img src="images/ceramic-2a.jpg" alt="Ceramic shelves, view 1">
@@ -89,27 +97,31 @@
       </div>
     </div>
 
-    <div class="archive-section" id="section-3">
+    <div class="gallery-panel" data-project="3">
       <p class="archive-section-title">Feel good</p>
-      <img src="images/ceramic-3.jpg" alt="Feel good piece" style="width: 100%; max-width: 400px; height: auto;">
-    </div>
-
-    <div class="archive-section" id="section-4">
-      <p class="archive-section-title">Upties</p>
-      <div class="gallery-grid">
-        <img src="images/ceramic-4a.jpg" alt="Upties, view 1">
-        <img src="images/ceramic-4b.jpg" alt="Upties, view 2">
-        <img src="images/ceramic-4c.jpg" alt="Upties, view 3">
-        <img src="images/ceramic-4d.jpg" alt="Upties, view 4">
+      <div class="gallery-single">
+        <img src="images/ceramic-3.jpg" alt="Feel good piece">
       </div>
     </div>
 
-    <div class="archive-section" id="section-5">
-      <p class="archive-section-title">Bowls</p>
-      <img src="images/ceramic-5.jpg" alt="Bowls" style="width: 100%; max-width: 400px; height: auto;">
+    <div class="gallery-panel" data-project="4">
+      <p class="archive-section-title">Upties</p>
+      <div class="gallery-grid-3">
+        <img src="images/ceramic-4a.jpg" alt="Upties, view 1">
+        <img src="images/ceramic-4b.jpg" alt="Upties, view 2">
+        <img src="images/ceramic-4c.jpg" alt="Upties, view 3">
+      </div>
     </div>
 
-    <div class="archive-section" id="section-6">
+    <div class="gallery-panel" data-project="5">
+      <p class="archive-section-title">Bowls</p>
+      <div class="gallery-stack">
+        <img src="images/ceramic-5a.jpg" alt="Bowls, stacked">
+        <img src="images/ceramic-5b.jpg" alt="Bowls, close-up">
+      </div>
+    </div>
+
+    <div class="gallery-panel" data-project="6">
       <p class="archive-section-title">Tiles</p>
       <div class="gallery-grid">
         <img src="images/ceramic-6a.jpg" alt="Tiles, view 1">
@@ -117,12 +129,15 @@
       </div>
     </div>
 
-    <div class="archive-section" id="section-7">
+    <div class="gallery-panel" data-project="7">
       <p class="archive-section-title">Arch stands</p>
-      <img src="images/ceramic-7.jpg" alt="Arch stands" style="width: 100%; max-width: 400px; height: auto;">
+      <div class="gallery-single">
+        <img src="images/ceramic-7.jpg" alt="Arch stands">
+      </div>
+      <p class="gallery-caption">Feel good.</p>
     </div>
 
-    <div class="archive-section" id="section-8">
+    <div class="gallery-panel" data-project="8">
       <p class="archive-section-title">General</p>
       <div class="gallery-grid">
         <img src="images/ceramic-8a.jpg" alt="General view 1">
@@ -130,8 +145,16 @@
       </div>
     </div>
 
+    <div class="archive-divider"></div>
+
     <a href="index.html" class="back-link">← back to everything</a>
 
+  </div>
+
+  <script src="gallery-switcher.js"></script>
+
+</body>
+</html>
   </div>
 
 </body>
