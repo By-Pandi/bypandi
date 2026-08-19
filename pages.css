@@ -252,6 +252,17 @@ body {
   margin-bottom: 16px;
 }
 
+/* Centered bold title shown above each gallery panel's images */
+.gallery-panel-title {
+  font-family: "JetBrains Mono", "IBM Plex Mono", "Courier New", monospace;
+  font-weight: 700;
+  text-align: center;
+  color: #111;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
 .archive-caption {
   font-size: 0.8rem;
   color: #777;
