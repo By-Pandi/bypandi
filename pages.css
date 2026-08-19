@@ -330,7 +330,7 @@ body {
   background: none;
   border: none;
   font-size: 1.4rem;
-  color: #d99a7c;
+  color: #666;
   cursor: pointer;
   padding: 8px;
 }
@@ -343,6 +343,6 @@ body {
 .pager-counter {
   text-align: center;
   font-size: 0.85rem;
-  color: #4a7fd9;
+  color: #111;
   margin-bottom: 24px;
 }
