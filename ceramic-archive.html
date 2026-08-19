@@ -69,6 +69,26 @@
 
     <div class="archive-divider"></div>
 
+  <!--
+      NUMBER NAV
+      Clicking a number shows that project's panel below — nothing
+      scrolls, every other panel stays hidden. Add more <a> tags
+      here as you add more numbered panels below.
+    -->
+    <nav class="archive-nav">
+      <a href="#" data-project="general">General</a><span class="sep">|</span>
+      <a href="#" data-project="1">1</a><span class="sep">|</span>
+      <a href="#" data-project="2">2</a><span class="sep">|</span>
+      <a href="#" data-project="3">3</a><span class="sep">|</span>
+      <a href="#" data-project="4">4</a><span class="sep">|</span>
+      <a href="#" data-project="5">5</a><span class="sep">|</span>
+      <a href="#" data-project="6">6</a><span class="sep">|</span>
+      <a href="#" data-project="7">7</a><span class="sep">|</span>
+      <a href="#" data-project="8">8</a>
+    </nav>
+ 
+    <div class="archive-divider"></div>
+ 
     <!--
       PANELS
       One per number. Only the active one is visible at a time.
@@ -76,16 +96,16 @@
       single photo, a grid, a caption, whatever fits. Mix and match
       the helper classes (.gallery-single, .gallery-grid,
       .gallery-grid-3, .gallery-stack) or write your own layout.
-
+ 
       TO ADD A NEW NUMBER LATER: copy one whole panel block, change
       data-project to the new number, swap the content inside, and
       add one matching <a> in the nav above.
     -->
-
-    <!-- Image 1: six photos, 2 per row -->
+ 
+    <!-- Project 1 -->
     <div class="gallery-panel" data-project="1">
       <p class="gallery-panel-title">Project 1</p>
-      <div class="gallery-grid">
+      <div class="gallery-stack">
         <img src="images/ceramica-candledancer1.jpg" alt="">
         <img src="images/ceramica-candledancer2.jpg" alt="">
         <img src="images/ceramica-candledancer3.jpg" alt="">
@@ -94,93 +114,86 @@
         <img src="images/ceramica-candledancer6.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 2: four photos, stacked in a single column -->
+ 
+    <!-- Project 2 -->
     <div class="gallery-panel" data-project="2">
       <p class="gallery-panel-title">Project 2</p>
       <div class="gallery-stack">
-        <img src="images/ceramic-2a.jpg" alt="">
-        <img src="images/ceramic-2b.jpg" alt="">
-        <img src="images/ceramic-2c.jpg" alt="">
-        <img src="images/ceramic-2d.jpg" alt="">
+        <img src="images/ceramica-lampara2.jpg" alt="">
+        <img src="images/ceramica-lampara1.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 3: three photos, stacked in a single column -->
+ 
+    <!-- Project 3 -->
     <div class="gallery-panel" data-project="3">
-      <p class="gallery-panel-title">Project 3</p>
+      <p class="gallery-panel-title">Feel Good + Ayez</p>
       <div class="gallery-stack">
-        <img src="images/ceramic-3a.jpg" alt="">
-        <img src="images/ceramic-3b.jpg" alt="">
-        <img src="images/ceramic-3c.jpg" alt="">
+        <img src="images/ceramica-graphiccoasters1.jpg" alt="">
+        <img src="images/ceramica-graphiccoasters3.jpg" alt="">
+        <img src="images/ceramica-graphiccoasters2.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 4: two photos side by side -->
+ 
+    <!-- Project 4 -->
     <div class="gallery-panel" data-project="4">
-      <p class="gallery-panel-title">Project 4</p>
-      <div class="gallery-grid">
-        <img src="images/ceramic-4a.jpg" alt="">
-        <img src="images/ceramic-4b.jpg" alt="">
+      <p class="gallery-panel-title">Goblets</p>
+      <div class="gallery-stack">
+        <img src="images/ceramica-goblet3.jpg" alt="">
+        <img src="images/ceramica-goblet1.jpg" alt="">
+        <img src="images/ceramica-goblet4.jpg" alt="">
+        <img src="images/ceramica-goblet2.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 5: one large photo on top, two smaller photos side by side below -->
+ 
+    <!-- Project 5 -->
     <div class="gallery-panel" data-project="5">
-      <p class="gallery-panel-title">Project 5</p>
-      <div class="gallery-single">
-        <img src="images/ceramic-5a.jpg" alt="">
-      </div>
-      <div class="gallery-grid" style="margin-top: 20px;">
-        <img src="images/ceramic-5b.jpg" alt="">
-        <img src="images/ceramic-5c.jpg" alt="">
-      </div>
-    </div>
-
-    <!-- Image 6: two full-width photos, stacked -->
-    <div class="gallery-panel" data-project="6" data-default>
-      <p class="gallery-panel-title">General</p>
+      <p class="gallery-panel-title">Bowls</p>
       <div class="gallery-stack">
-        <img src="images/ceramic-6a.jpg" alt="" style="max-width: 100%;">
-        <img src="images/ceramic-6b.jpg" alt="" style="max-width: 100%;">
+        <img src="images/ceramica-bowls1.jpg" alt="">
+        <img src="images/ceramica-bowls3.jpg" alt="">
+        <img src="images/ceramica-bowls2.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 7: three photos in a row, then two side by side, then one large -->
+ 
+    <!-- General (shown by default) -->
+    <div class="gallery-panel" data-project="general" data-default>
+      <p class="gallery-panel-title"> </p>
+      <div class="gallery-stack">
+        <img src="images/ceramica-todo2.jpg" alt="">
+        <img src="images/ceramica-todo1.jpg" alt="">
+      </div>
+    </div>
+ 
+    <!-- Project 6 -->
+    <div class="gallery-panel" data-project="6">
+      <p class="gallery-panel-title">Radial Coasters</p>
+      <div class="gallery-stack">
+        <img src="images/ceramica-4coasters1.jpg" alt="">
+        <img src="images/ceramica-4coasters4.jpg" alt="">
+        <img src="images/ceramica-4coasters2.jpg" alt="">
+        <img src="images/ceramica-4coasters3.jpg" alt="">
+      </div>
+    </div>
+ 
+    <!-- Project 7 -->
     <div class="gallery-panel" data-project="7">
-      <p class="gallery-panel-title">Project 7</p>
-      <div class="gallery-grid-3">
-        <img src="images/ceramic-7a.jpg" alt="">
-        <img src="images/ceramic-7b.jpg" alt="">
-        <img src="images/ceramic-7c.jpg" alt="">
-      </div>
-      <div class="gallery-grid" style="margin-top: 20px;">
-        <img src="images/ceramic-7d.jpg" alt="">
-        <img src="images/ceramic-7e.jpg" alt="">
-      </div>
-      <div class="gallery-single" style="margin-top: 20px;">
-        <img src="images/ceramic-7f.jpg" alt="">
+      <p class="gallery-panel-title">Pescado</p>
+      <div class="gallery-stack">
+        <img src="images/ceramica-pescado3.jpg" alt="">
+        <img src="images/ceramica-pescado1.jpg" alt="">
+        <img src="images/ceramica-pescado2.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 8: two photos, stacked -->
+ 
+    <!-- Project 8 -->
     <div class="gallery-panel" data-project="8">
-      <p class="gallery-panel-title">Project 8</p>
+      <p class="gallery-panel-title">hsdjfjdj 8</p>
       <div class="gallery-stack">
-        <img src="images/ceramic-8a.jpg" alt="">
-        <img src="images/ceramic-8b.jpg" alt="">
+        <img src="images/ceramica-marron1.jpg" alt="">
+        <img src="images/ceramica-marron1.jpg" alt="">
       </div>
     </div>
-
-    <!-- Image 9: three photos, stacked -->
-    <div class="gallery-panel" data-project="9">
-      <p class="gallery-panel-title">Project 9</p>
-      <div class="gallery-stack">
-        <img src="images/ceramic-9a.jpg" alt="">
-        <img src="images/ceramic-9b.jpg" alt="">
-        <img src="images/ceramic-9c.jpg" alt="">
-      </div>
-    </div>
+ 
 
     <div class="archive-divider"></div>
 
