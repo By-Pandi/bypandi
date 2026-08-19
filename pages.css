@@ -125,6 +125,14 @@ body {
   margin: 16px 0;
 }
 
+/* A single solid line, heavier than the dashed dividers — use this
+   for the one divider under the tag line, or anywhere you want a
+   stronger break instead of the usual dashed rule. */
+.archive-divider-solid {
+  border-top: 1px solid #111;
+  margin: 16px 0;
+}
+
 .archive-title {
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
