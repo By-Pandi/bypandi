@@ -37,6 +37,11 @@ body {
   margin-bottom: 40px;
 }
 
+.page-header a {
+  text-decoration: none;
+  color: #111;
+}
+
 .page-header .site-name {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
@@ -44,24 +49,13 @@ body {
 }
 
 .page-header img {
-  height: 32px;
+  height: 40px;
   width: auto;
+  transition: filter 0.2s ease;
 }
 
-.page-header .back-link {
-  margin-bottom: 0;
-}
-
-.back-link {
-  display: inline-block;
-  font-size: 0.85rem;
-  color: #111;
-  text-decoration: none;
-  margin-bottom: 32px;
-}
-
-.back-link:hover {
-  text-decoration: underline;
+.page-header .logo-link:hover img {
+  filter: invert(1);
 }
 
 /* Page title, same DM Sans bold as the homepage title */
