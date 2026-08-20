@@ -138,13 +138,18 @@
   const referenceColors = ['#e07a5f', '#5f9ee0', '#7fc47f', '#d99a4a', '#a97fd9', '#e05f8f'];
 
   document.querySelectorAll('.reference-row').forEach(function (row) {
+    let fadeTimeout;
+
     row.addEventListener('mouseenter', function () {
+      clearTimeout(fadeTimeout);
       const randomColor = referenceColors[Math.floor(Math.random() * referenceColors.length)];
       row.style.color = randomColor;
     });
 
     row.addEventListener('mouseleave', function () {
-      row.style.color = '';
+      fadeTimeout = setTimeout(function () {
+        row.style.color = '';
+      }, 800);
     });
   });
   </script>
