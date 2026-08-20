@@ -142,8 +142,12 @@
       const randomColor = referenceColors[Math.floor(Math.random() * referenceColors.length)];
       row.style.color = randomColor;
     });
+
+    row.addEventListener('mouseleave', function () {
+      row.style.color = '';
+    });
   });
-</script>
+  </script>
  
 </body>
 </html>
