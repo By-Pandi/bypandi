@@ -369,8 +369,7 @@ body {
 }
  
 .reference-row:hover {
-  color: #e07a5f;
-  transform: scale(1.02);
+  transform: scale(1.02) translateX (6px);
 }
  
 .reference-name {
