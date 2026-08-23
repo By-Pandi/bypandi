@@ -394,7 +394,7 @@ body {
    height follows each photo's own real aspect ratio */
 .making-of-image {
   width: 100%;
-  max-width: 600px;
+  max-width: 1000px;
   height: auto;
   display: block;
   margin: 0 auto 20px auto;
