@@ -106,25 +106,25 @@ body {
 
 .row-ceramic:hover .entry-name,
 .row-ceramic:hover .entry-link {
-  color: #e07a5f;
+  color: #cf00cf;
   transform: scale(1.05);
 }
 
 .row-sibol:hover .entry-name,
 .row-sibol:hover .entry-link {
-  color: #5f9ee0;
+  color: #ed9a00;
   transform: scale(1.05);
 }
 
 .row-fanzine:hover .entry-name,
 .row-fanzine:hover .entry-link {
-  color: #e07a5f;
+  color: #278f04;
   transform: scale(1.05);
 }
 
 .row-andiamo:hover .entry-name,
 .row-andiamo:hover .entry-link {
-  color: #e07a5f;
+  color: #1da4d1;
   transform: scale(1.05);
 }
 
@@ -136,7 +136,7 @@ body {
 
 .row-presto:hover .entry-name,
 .row-presto:hover .entry-link {
-  color: #e07a5f;
+  color: #b80000;
   transform: scale(1.05);
 }
 
