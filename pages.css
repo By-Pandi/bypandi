@@ -440,4 +440,43 @@ body {
     flex: none;
   }
 }
+
+/*
+  ACCORDION
+  Click a header row, its content expands below it. Click again,
+  it collapses. Each item is independent.
+*/
+.accordion-item {
+  border-top: 1px dashed #bbb;
+}
+ 
+.accordion-item:last-child {
+  border-bottom: 1px dashed #bbb;
+}
+ 
+.accordion-header {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #111;
+  padding: 12px 0;
+  cursor: pointer;
+}
+ 
+.accordion-content {
+  display: none;
+  padding-bottom: 20px;
+}
+ 
+.accordion-item.open .accordion-content {
+  display: block;
+}
+ 
+.accordion-item.open .accordion-header {
+  font-weight: 700;
+}
  
