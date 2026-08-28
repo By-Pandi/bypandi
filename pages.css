@@ -399,3 +399,45 @@ body {
   display: block;
   margin: 0 auto 20px auto;
 }
+
+
+/*
+  INFO BLOCK
+  Rows of "label on the left, description on the right" — e.g.
+  Context / The Alternative / Design Focus / This Project.
+  Add or remove .info-row blocks freely inside .info-block.
+*/
+.info-block {
+  margin: 24px 0;
+}
+ 
+.info-row {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+ 
+.info-label {
+  font-weight: 700;
+  flex: 0 0 140px;
+  font-size: 0.9rem;
+}
+ 
+.info-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+ 
+/* Stack label above text on narrow screens instead of side by side */
+@media (max-width: 600px) {
+  .info-row {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .info-label {
+    flex: none;
+  }
+}
+ 
