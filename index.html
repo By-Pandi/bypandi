@@ -38,15 +38,17 @@
 
   <!-- NAV BAR -->
   <header class="nav-bar">
-    <a href="index.html" class="nav-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></a>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="journal.html">Journal</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="#reach-out">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="nav-bar-inner">
+      <a href="index.html" class="nav-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="journal.html">Journal</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#reach-out">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <!-- HERO -->
@@ -128,22 +130,29 @@
   </section>
 
   <!-- JOURNAL TEASER -->
-  <section class="journal-teaser-section">
-    <a href="journal.html" class="journal-teaser-title">JOURNAL</a>
+  <section class="journal-teaser-section" style="position: relative;">
+    <div class="journal-teaser-inner">
+      <a href="journal.html" class="journal-teaser-title">JOURNAL</a>
 
-    <a href="journal.html" class="journal-teaser-card">
-      <div class="journal-teaser-card-top">
-        <div class="journal-teaser-card-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></div>
-        <div class="journal-teaser-card-dash"></div>
-      </div>
-      <div class="journal-teaser-arrow-box">
-        <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><use href="#arrow-icon"></use></svg>
-      </div>
-      <div class="journal-teaser-card-lines">
-        <span></span>
-        <span style="width: 70%;"></span>
-      </div>
-    </a>
+      <a href="journal.html" class="journal-teaser-card">
+        <div class="journal-teaser-card-top">
+          <div class="journal-teaser-card-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></div>
+          <div class="journal-teaser-card-dash"></div>
+        </div>
+        <div class="journal-teaser-arrow-box">
+          <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet"><use href="#arrow-icon"></use></svg>
+        </div>
+        <div class="journal-teaser-card-lines">
+          <span></span>
+          <span style="width: 70%;"></span>
+        </div>
+      </a>
+    </div>
+
+    <!-- Bottom wave: green, matching this section, dipping down into the About photo below -->
+    <svg class="wave wave-flip" style="color: var(--color-green); position: absolute; bottom: -1px; left: 0;" preserveAspectRatio="none" viewBox="0 0 1634 102">
+      <use href="#wave-shape"></use>
+    </svg>
   </section>
 
   <!-- ABOUT TEASER -->
