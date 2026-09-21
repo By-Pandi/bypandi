@@ -125,7 +125,7 @@ img {
 }
 
 .hero-logo {
-  width: 260px;
+  width: 320px;
   height: auto;
   color: var(--color-black);
   flex-shrink: 0;
@@ -139,14 +139,14 @@ img {
 
 .hero-title {
   font-weight: 700;
-  font-size: 4.5rem;
+  font-size: 5.5rem;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .hero-tagline {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   color: #444;
 }
 
@@ -171,7 +171,7 @@ img {
 
 .receipt-section {
   position: relative;
-  background-image: url("images/background.jpg");
+  background-image: url("images/shelf-background.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 24px;
