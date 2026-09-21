@@ -1,0 +1,458 @@
+/*
+  styles.css — shared across every page of the new site.
+
+  PALETTE (confirmed from your mockups):
+    black:  #000000
+    white:  #ffffff
+    green:  #008109
+    pink:   #ff91e0
+    red:    #cb1c23
+    orange: #ff8c23  (traffic-light hover only)
+
+  FONT: Montserrat, weights 400 and 700 only.
+*/
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-green: #008109;
+  --color-pink: #ff91e0;
+  --color-red: #cb1c23;
+  --color-orange: #ff8c23;
+  --font-main: "Montserrat", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-black);
+  background: var(--color-white);
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================================================
+   SHARED ICON SYMBOLS (defined once, reused everywhere)
+   Both use fill="currentColor" so you set their color from
+   CSS wherever they're placed — no separate colored exports.
+   ========================================================== */
+
+.icon-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ==========================================================
+   NAV BAR — identical on every page
+   ========================================================== */
+
+.nav-bar {
+  background: var(--color-black);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+}
+
+.nav-bar .nav-logo {
+  width: 40px;
+  height: auto;
+  color: var(--color-white);
+}
+
+.nav-bar .nav-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ==========================================================
+   HERO — logo + BY PANDI + tagline
+   ========================================================== */
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 64px 48px;
+}
+
+.hero-logo {
+  width: 180px;
+  height: auto;
+  color: var(--color-black);
+  flex-shrink: 0;
+}
+
+.hero-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.hero-tagline {
+  font-weight: 400;
+  font-size: 1.25rem;
+  color: #444;
+}
+
+/* ==========================================================
+   WAVE DIVIDERS — one shape, reused everywhere.
+   Use .wave-flip to point it the other direction.
+   ========================================================== */
+
+.wave {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+.wave-flip {
+  transform: scaleY(-1);
+}
+
+/* ==========================================================
+   RECEIPT SECTION — shelf photo background, floating card
+   ========================================================== */
+
+.receipt-section {
+  position: relative;
+  background-image: url("images/shelf-background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 80px 24px;
+}
+
+.receipt-card {
+  max-width: 620px;
+  margin: 0 auto;
+  background-image: url("images/paper-texture.png");
+  background-size: cover;
+  background-color: #f5f5f0; /* fallback while paper-texture.png isn't uploaded yet */
+  padding: 32px 28px;
+  font-size: 0.9rem;
+}
+
+.receipt-logo {
+  width: 60px;
+  height: auto;
+  color: var(--color-black);
+  margin: 0 auto 16px auto;
+}
+
+.receipt-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.receipt-heading {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.receipt-subheading {
+  text-align: center;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.receipt-rule {
+  border-top: 1px dashed #999;
+  margin: 16px 0;
+}
+
+.receipt-meta-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+}
+
+/*
+  Each project row: name on the left, category + arrow on the right.
+  TO ADD A NEW ROW LATER: copy one whole .receipt-row block, change
+  the text and the href.
+*/
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 0;
+  transition: color 0.2s ease, transform 0.2s ease;
+  transform-origin: left;
+}
+
+.receipt-row:hover {
+  transform: scale(1.02);
+}
+
+.receipt-total-row {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  padding-top: 12px;
+}
+
+/* Fake barcode using striped CSS — no image asset needed */
+.receipt-barcode {
+  height: 50px;
+  margin: 20px auto 0 auto;
+  max-width: 320px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #111 0px, #111 2px,
+    transparent 2px, transparent 5px,
+    #111 5px, #111 6px,
+    transparent 6px, transparent 10px
+  );
+}
+
+/* ==========================================================
+   JOURNAL TEASER — green wave section
+   ========================================================== */
+
+.journal-teaser-section {
+  background: var(--color-green);
+  padding: 64px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.journal-teaser-title {
+  color: var(--color-pink);
+  font-weight: 700;
+  font-size: 4rem;
+  text-decoration: none;
+}
+
+/* The little browser-mockup card — built entirely with code, no image */
+.journal-teaser-card {
+  border: 2px solid var(--color-pink);
+  width: 260px;
+  height: 220px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: var(--color-pink);
+}
+
+.journal-teaser-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.journal-teaser-card-logo {
+  width: 32px;
+  height: auto;
+  color: var(--color-pink);
+}
+
+.journal-teaser-card-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.journal-teaser-card-dash {
+  width: 24px;
+  height: 3px;
+  background: var(--color-pink);
+}
+
+.journal-teaser-arrow-box {
+  background: var(--color-pink);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.journal-teaser-arrow-box svg {
+  width: 40px;
+  height: 40px;
+  color: var(--color-green);
+}
+
+.journal-teaser-card-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.journal-teaser-card-lines span {
+  display: block;
+  height: 2px;
+  background: var(--color-pink);
+}
+
+/* ==========================================================
+   ABOUT TEASER — photo with overlay text
+   ========================================================== */
+
+.about-teaser {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: var(--color-pink);
+}
+
+.about-teaser img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-teaser-label {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  font-weight: 700;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ==========================================================
+   FOOTER — identical on every page
+   ========================================================== */
+
+.site-footer {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 48px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.site-footer .back-to-top {
+  position: absolute;
+  top: 24px;
+  right: 32px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.site-footer .back-to-top:hover {
+  text-decoration: underline;
+}
+
+.reach-out-heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.reach-out-line {
+  margin-bottom: 8px;
+}
+
+.reach-out-line a {
+  text-decoration: none;
+}
+
+.reach-out-line a:hover {
+  text-decoration: underline;
+}
+
+.thanks-heading {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 40px 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.thanks-logo {
+  width: 48px;
+  height: auto;
+  color: var(--color-white);
+}
+
+.thanks-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 700px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  .journal-teaser-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .receipt-meta-row,
+  .receipt-row,
+  .receipt-total-row {
+    font-size: 0.8rem;
+  }
+}

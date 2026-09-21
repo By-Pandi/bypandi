@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>By Pandi</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+  <!--
+    ICON DEFINITIONS — defined once, reused everywhere via <use>.
+    Both use fill="currentColor" so every place they're used can
+    set its own color from CSS (color: ...) with no re-export needed.
+  -->
+  <svg class="icon-defs" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="pandi-logo" viewBox="0 0 1124 623">
+      <path fill="currentColor" d="M472.14,59.493c-66.053,8.858 -129.097,26.963 -185.898,63.043c-75.227,47.784 -118.779,115.352 -144.049,200.171c-3.933,17.152 -11.169,35.941 -10.929,53.618c0.517,38.028 16.929,70.273 51.657,85.631c11.044,4.881 27.367,4.904 40.75,6.632c4.672,1.429 11.57,1.548 16.18,2.458c15.298,3.05 25.731,12.384 33.08,25.751c7.634,13.871 11.386,29.134 16.159,44.028c3.035,9.515 5.815,19.154 10.787,27.877c2.735,4.799 5.747,9.634 11.577,11.456c7.77,2.433 12.155,0.698 15.58,-6.623c4.743,-10.134 6.707,-21.103 8.985,-31.949c3.159,-15.075 6.588,-30.087 14.477,-43.545c10.216,-17.403 25.399,-26.251 45.748,-27.083c21.965,-0.902 36.493,9.486 46.263,28.185c7.466,14.278 11.109,29.917 16.089,45.086c2.859,8.729 5.452,17.601 10.235,25.536c2.865,4.742 5.887,9.469 11.881,11.059c7.279,1.939 11.156,0.437 14.523,-6.226c4.465,-8.876 6.373,-18.536 8.394,-28.148c3.499,-16.603 6.766,-33.341 15.544,-48.17c10.146,-17.163 25.226,-26.7 45.406,-26.68c20.194,0.023 35.251,9.643 45.331,26.822c8.734,14.857 11.919,31.618 15.311,48.244c1.839,9.004 3.629,18.025 7.415,26.48c4.737,10.554 14.861,12.036 22.717,3.378c6.817,-7.519 9.776,-16.957 13.061,-26.224c5.288,-14.902 8.901,-30.39 15.407,-44.877c6.546,-14.595 15.638,-26.97 31.803,-31.491c24.128,-6.756 50.126,2.279 62.889,25.202c8.513,15.273 11.868,32.154 15.307,49.017c1.779,8.727 3.596,17.477 7.282,25.668c4.691,10.404 15.116,11.883 22.903,3.363c6.884,-7.525 9.664,-17.041 12.942,-26.31c4.748,-13.427 8.179,-27.285 13.516,-40.51c2.915,-7.235 6.419,-14.172 11.277,-20.334c8.768,-11.106 19.992,-16.717 34.328,-17.923c9.305,-0.775 18.455,-4.158 27.411,-7.301c16.685,-5.847 25.534,-15.51 38.213,-28.264c9.837,-16.84 12.389,-30.405 14.498,-48.069c4.066,-34.107 3.156,-62.926 -7.06,-94.959c-16.895,-52.966 -41.727,-95.765 -83.023,-133.258c-36.928,-33.526 -77.128,-59.667 -123.955,-76.054c-31.972,-11.182 -64.819,-18.688 -98.354,-23.484c-32.575,-4.652 -65.278,-6.902 -101.349,-6.88c-28.12,-0.403 -59.31,1.498 -90.308,5.657m573.353,-30.266c47.954,28.11 72.725,70.757 77.2,126.09c2.14,26.482 -2.794,49.7 -12.319,74.51c-17.427,45.395 -41.865,73.388 -81.653,100.826c-2.278,1.567 -13.828,5.876 -13.265,9.396c3.131,19.48 1.712,41.659 -1.474,61.22c-3.496,21.403 -8.083,38.916 -18.643,55.157c-21.449,32.991 -51.778,46.437 -88.883,54.05c-9.666,1.984 -16.086,5.344 -18.785,14.857c-0.469,1.674 -1.255,3.266 -1.849,4.911c-5.412,15.121 -9.165,30.804 -15.33,45.677c-5.497,13.253 -12.354,25.57 -23.82,34.675c-25.43,20.187 -66.056,15.725 -81.601,-18.934c-6.353,-14.165 -9.256,-29.246 -12.426,-44.279c-2.029,-9.632 -3.858,-19.335 -8.661,-28.129c-3.065,-5.614 -7.73,-7.355 -13.911,-7.228c-5.313,0.103 -6.315,4.165 -8.176,7.459c-1.542,2.739 -2.777,5.696 -3.778,8.685c-4.227,12.599 -8.136,25.308 -12.487,37.871c-5.391,15.565 -12.127,30.408 -24.617,41.847c-24.68,22.59 -68.486,19.865 -84.59,-16.853c-6.239,-14.212 -9.179,-29.264 -12.378,-44.297c-2.143,-10.053 -4.026,-20.28 -9.665,-29.151c-4.988,-7.836 -14.518,-7.851 -19.695,-0.192c-2.863,4.244 -4.748,8.993 -5.978,13.909c-3.689,14.747 -6.78,29.656 -10.871,44.28c-3.528,12.608 -8.514,24.701 -18.822,33.63c-23.182,20.074 -58.534,15.894 -78.256,-9.179c-10.823,-13.757 -16.273,-29.985 -21.457,-46.348c-3.87,-12.208 -6.713,-24.783 -12.696,-36.233c-3.409,-6.519 -6.919,-7.671 -14.098,-5.54c-4.481,1.333 -6.596,4.838 -8.413,8.543c-4.016,8.17 -5.988,17.004 -7.865,25.838c-3.495,16.429 -6.721,32.927 -14.552,48.05c-10.255,19.804 -32.545,30.282 -54.55,26.229c-20.17,-3.714 -33.466,-15.883 -42.924,-33.159c-6.974,-12.717 -11.12,-26.538 -15.348,-40.319c-3.3,-10.731 -5.995,-21.709 -11.673,-31.546c-1.216,-2.094 -2.322,-4.28 -5.428,-4.811c-23.702,-4.074 -52.027,-9.222 -73.229,-20.759c-28.722,-15.643 -49.881,-36.667 -59.624,-68.349c-7.844,-25.514 -5.335,-54.174 -1.535,-80.219c0.455,-3.153 -1.394,-8.937 -3.744,-10.549c-22.039,-15.07 -36.087,-29.474 -51.911,-50.982c-29.645,-40.287 -45.722,-84.917 -40.85,-135.515c4.397,-45.689 24.793,-83.045 62.02,-110.15c44.508,-32.405 94.702,-39.76 147.962,-30.529c41.518,7.197 78.33,24.961 111.251,51.019c2.061,1.633 3.649,2.09 6.251,0.985c7.572,-3.223 15.246,-6.255 23.023,-8.948c52.547,-18.205 106.737,-27.979 162.167,-31.393c55.875,-3.443 111.509,-1.725 166.869,7.205c41.933,6.761 82.684,17.637 121.88,34.07c3.242,1.359 5.233,1.026 7.951,-1.082c43.705,-33.95 92.838,-52.868 142.143,-53.278c39.459,0.115 64.429,10.146 93.112,26.963"/>
+      <path fill="currentColor" d="M599.859,435.024c10.845,-13.319 9.396,-32.335 -3.073,-44.101c-14.409,-13.604 -38.101,-14.608 -53.466,-2.083c-10.064,8.196 -14.749,18.994 -12.23,31.735c2.992,15.079 13.391,23.551 27.861,27.431c3.232,0.868 6.543,1.301 9.946,1.054c12.378,-0.105 23.032,-4.3 30.963,-14.037m76.936,-48.504c4.69,9.936 11.329,18.309 20.084,25.121c23.907,18.601 49.411,34.008 79.188,41.335c30.729,7.569 60.92,5.312 90.397,-5.534c23.421,-8.615 37.272,-32.675 34.556,-58.057c-1.5,-14.046 -5.885,-26.995 -13.639,-38.841c-6.092,-9.312 -14.166,-15.783 -25.037,-18.674c-4.851,-1.288 -9.603,-2.939 -14.409,-4.392c-17.984,-5.449 -30.584,-17.062 -38.978,-33.667c-7.067,-13.981 -12.326,-28.768 -19.222,-42.826c-6.358,-12.946 -13.751,-25.118 -25.537,-34.007c-29.589,-22.288 -74.433,-12.711 -93.576,19.91c-10.942,18.644 -13.512,39.138 -13.866,61.388c0.681,29.964 6.678,59.936 20.038,88.243m-245.326,37.907c6.798,-4.419 13.275,-9.343 19.865,-14.065c15.929,-11.429 24.099,-28.014 30.44,-45.812c9.952,-27.933 14.764,-56.73 13.523,-86.357c-0.87,-20.752 -5.535,-40.611 -17.98,-57.828c-24.207,-33.472 -81.74,-41.606 -110.959,3.321c-9.558,14.699 -16.01,30.93 -23.132,46.838c-4.343,9.701 -8.806,19.323 -15.337,27.843c-10.335,13.481 -24.646,20.618 -40.593,24.043c-30.235,6.499 -41.144,28.869 -46.695,55.5c-3.76,18.04 -0.544,35.049 11.045,50.036c9.448,12.225 22.483,18.285 36.927,22.02c14.665,3.794 29.479,6.534 41.228,6.18c39.705,0.187 71.817,-12.319 101.667,-31.721"/>
+    </symbol>
+
+    <!-- Wave shape: wavy on top, flat on bottom. Flip with .wave-flip when needed. -->
+    <symbol id="wave-shape" viewBox="0 0 1634 102" preserveAspectRatio="none">
+      <path fill="currentColor" d="M0.01,0c-0.904,45.354 59.721,128.642 115.508,88.623c27.83,-19.963 67.539,-107.129 147.075,-18.771c89.522,99.452 125.335,-71.589 221.029,-28.851c27.681,12.363 93.06,106.676 155.265,29.153c41.609,-51.855 87.098,-45.79 117.299,-15.927c23.625,23.361 95.372,82.283 139.55,11.058c15.017,-24.211 75.686,-57.139 119.087,-11.882c58.008,60.489 102.207,62.763 137.618,11.882c46.591,-66.947 104.373,-22.553 137.21,5.589c95.341,81.709 88.558,-36.774 172.869,-34.842c40.613,0.931 37.031,66.506 119.495,61.267c36.82,-2.339 49.22,-47.352 51.065,-96.648l-1633.071,-0.651Z"/>
+    </symbol>
+
+    <!-- Simple arrow, used in the Journal teaser card -->
+    <symbol id="arrow-icon" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M4 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <!-- NAV BAR -->
+  <header class="nav-bar">
+    <a href="index.html" class="nav-logo"><svg><use href="#pandi-logo"></use></svg></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#reach-out">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-logo"><svg><use href="#pandi-logo"></use></svg></div>
+    <div>
+      <h1 class="hero-title">BY PANDI</h1>
+      <p class="hero-tagline">Creative Journey</p>
+    </div>
+  </section>
+
+  <!-- RECEIPT SECTION -->
+  <section class="receipt-section" id="projects">
+
+    <!-- Top wave: white, matching the hero section above -->
+    <svg class="wave" style="color: var(--color-white); position: absolute; top: 0; left: 0;" preserveAspectRatio="none" viewBox="0 0 1634 102">
+      <use href="#wave-shape"></use>
+    </svg>
+
+    <div class="receipt-card">
+      <div class="receipt-logo"><svg><use href="#pandi-logo"></use></svg></div>
+      <p class="receipt-heading">BY PANDI</p>
+      <p class="receipt-subheading">Projects</p>
+
+      <div class="receipt-rule"></div>
+
+      <div class="receipt-meta-row">
+        <span id="receipt-date"></span>
+        <span id="receipt-time"></span>
+      </div>
+
+      <div class="receipt-rule"></div>
+
+      <!--
+        PROJECT ROWS
+        TO ADD A NEW ROW LATER: copy one whole .receipt-row block,
+        change the text and href. No CSS changes needed.
+      -->
+      <a href="ceramic-archive.html" class="receipt-row">
+        <span>01 - Ceramic Archive</span>
+        <span>Pottery →</span>
+      </a>
+      <a href="sibol.html" class="receipt-row">
+        <span>02 - Sibol</span>
+        <span>Upcycling →</span>
+      </a>
+      <a href="ban-cars-already.html" class="receipt-row">
+        <span>03 - Ban cars already Fanzine</span>
+        <span>Fanzine →</span>
+      </a>
+      <a href="andiamo.html" class="receipt-row">
+        <span>04 - Andiamo</span>
+        <span>B.Ing Thesis →</span>
+      </a>
+      <a href="https://www.behance.net/" target="_blank" rel="noopener" class="receipt-row">
+        <span>05 - Agora</span>
+        <span>Movin On design award →</span>
+      </a>
+      <a href="presto.html" class="receipt-row">
+        <span>06 - Presto</span>
+        <span>Vidrala design award →</span>
+      </a>
+
+      <div class="receipt-rule"></div>
+
+      <div class="receipt-total-row">
+        <span>Total</span>
+        <span>&lt;3&lt;3&lt;3</span>
+      </div>
+
+      <div class="receipt-barcode"></div>
+    </div>
+
+    <!-- Bottom wave: green, matching the Journal teaser section below. Flipped so it curves the opposite way. -->
+    <svg class="wave wave-flip" style="color: var(--color-green); position: absolute; bottom: 0; left: 0;" preserveAspectRatio="none" viewBox="0 0 1634 102">
+      <use href="#wave-shape"></use>
+    </svg>
+
+  </section>
+
+  <!-- JOURNAL TEASER -->
+  <section class="journal-teaser-section">
+    <a href="journal.html" class="journal-teaser-title">JOURNAL</a>
+
+    <a href="journal.html" class="journal-teaser-card">
+      <div class="journal-teaser-card-top">
+        <div class="journal-teaser-card-logo"><svg><use href="#pandi-logo"></use></svg></div>
+        <div class="journal-teaser-card-dash"></div>
+      </div>
+      <div class="journal-teaser-arrow-box">
+        <svg><use href="#arrow-icon"></use></svg>
+      </div>
+      <div class="journal-teaser-card-lines">
+        <span></span>
+        <span style="width: 70%;"></span>
+      </div>
+    </a>
+  </section>
+
+  <!-- ABOUT TEASER -->
+  <a href="about.html" class="about-teaser">
+    <img src="images/about-photo.jpg" alt="Portrait photo">
+    <span class="about-teaser-label">ABOUT ME <svg style="width:32px;height:32px;"><use href="#arrow-icon"></use></svg></span>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="reach-out">
+    <a href="#" class="back-to-top">Back to the top ↑</a>
+
+    <p class="reach-out-heading">REACH OUT</p>
+    <p class="reach-out-line"><a href="mailto:hello@by-pandi.com">hello@by-pandi.com</a></p>
+    <p class="reach-out-line"><a href="#" target="_blank" rel="noopener">@made.by.pandi</a></p>
+
+    <div class="thanks-heading">
+      THANKS
+      <div class="thanks-logo"><svg><use href="#pandi-logo"></use></svg></div>
+    </div>
+
+    <p class="copyright">© 2026 By Pandi. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Live date/time in the receipt header, same idea as before
+    const now = new Date();
+    document.getElementById('receipt-date').textContent = now.toLocaleDateString('en-GB');
+    document.getElementById('receipt-time').textContent = now.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+
+    // "Back to the top" scrolls smoothly instead of jumping
+    document.querySelector('.back-to-top').addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
