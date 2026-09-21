@@ -43,6 +43,15 @@ img {
   display: block;
 }
 
+/* Caps content width so it stays proportional on wide screens,
+   while backgrounds (nav, receipt photo, green section, footer)
+   still stretch full-bleed edge to edge. */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
 /* ==========================================================
    SHARED ICON SYMBOLS (defined once, reused everywhere)
    Both use fill="currentColor" so you set their color from
@@ -63,16 +72,21 @@ img {
 .nav-bar {
   background: var(--color-black);
   color: var(--color-white);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 20px 32px;
 }
 
+.nav-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .nav-bar .nav-logo {
+  display: block;
   width: 40px;
   height: auto;
   color: var(--color-white);
+  line-height: 0;
 }
 
 .nav-bar .nav-logo svg {
@@ -106,10 +120,12 @@ img {
   align-items: center;
   gap: 32px;
   padding: 64px 48px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-logo {
-  width: 180px;
+  width: 260px;
   height: auto;
   color: var(--color-black);
   flex-shrink: 0;
@@ -123,14 +139,14 @@ img {
 
 .hero-title {
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   letter-spacing: 1px;
   margin-bottom: 8px;
 }
 
 .hero-tagline {
   font-weight: 400;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: #444;
 }
 
@@ -155,7 +171,7 @@ img {
 
 .receipt-section {
   position: relative;
-  background-image: url("images/background.jpg");
+  background-image: url("images/shelf-background.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 24px;
@@ -256,6 +272,11 @@ img {
 .journal-teaser-section {
   background: var(--color-green);
   padding: 64px 48px;
+}
+
+.journal-teaser-inner {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -266,21 +287,22 @@ img {
 .journal-teaser-title {
   color: var(--color-pink);
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 6rem;
   text-decoration: none;
 }
 
 /* The little browser-mockup card — built entirely with code, no image */
 .journal-teaser-card {
   border: 2px solid var(--color-pink);
-  width: 260px;
-  height: 220px;
-  padding: 16px;
+  width: 340px;
+  height: 300px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
   color: var(--color-pink);
+  flex-shrink: 0;
 }
 
 .journal-teaser-card-top {
@@ -290,7 +312,7 @@ img {
 }
 
 .journal-teaser-card-logo {
-  width: 32px;
+  width: 44px;
   height: auto;
   color: var(--color-pink);
 }
@@ -302,15 +324,15 @@ img {
 }
 
 .journal-teaser-card-dash {
-  width: 24px;
-  height: 3px;
+  width: 32px;
+  height: 4px;
   background: var(--color-pink);
 }
 
 .journal-teaser-arrow-box {
   background: var(--color-pink);
-  width: 80px;
-  height: 80px;
+  width: 110px;
+  height: 110px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -318,8 +340,8 @@ img {
 }
 
 .journal-teaser-arrow-box svg {
-  width: 40px;
-  height: 40px;
+  width: 54px;
+  height: 54px;
   color: var(--color-green);
 }
 
@@ -446,7 +468,7 @@ img {
   .hero-title {
     font-size: 2.25rem;
   }
-  .journal-teaser-section {
+  .journal-teaser-inner {
     flex-direction: column;
     text-align: center;
   }
