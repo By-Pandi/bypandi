@@ -171,7 +171,7 @@ img {
 
 .receipt-section {
   position: relative;
-  background-image: url("images/shelf-background.jpg");
+  background-image: url("images/background.jpg");
   background-size: cover;
   background-position: center;
   padding: 80px 24px;
