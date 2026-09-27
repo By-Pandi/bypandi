@@ -732,6 +732,7 @@ img {
 
 /* Feed */
 .journal-feed-wrap {
+  position: relative;
   height: 600px;
   border: 2px solid var(--color-black);
   overflow: hidden;
@@ -760,13 +761,38 @@ img {
   display: none;
 }
 
-.feed-title-bar {
-  background: var(--color-black);
-  color: var(--color-white);
-  text-align: center;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 10px;
+/* One shared loading screen covering the whole box, used for every post */
+.feed-loading-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed-loading-overlay[hidden] {
+  display: none;
+}
+
+.feed-loading-overlay .loading-logo {
+  width: 90px;
+  height: auto;
+}
+
+.feed-loading-overlay .loading-logo svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* While a post is expanded, hide every other post so the open one
+   takes over the whole feed box */
+.journal-feed.has-expanded .journal-post:not(.is-expanded) {
+  display: none;
+}
+
+.journal-post.is-expanded {
+  min-height: 100%;
 }
 
 .journal-post {
@@ -868,29 +894,6 @@ img {
 
 .journal-post.is-expanded .post-content {
   cursor: default;
-}
-
-.post-loading {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.post-loading[hidden] {
-  display: none;
-}
-
-.post-loading .loading-logo {
-  width: 70px;
-  height: auto;
-}
-
-.post-loading .loading-logo svg {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 
 /* Scroll rail */
