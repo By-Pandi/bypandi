@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(function () {
       loading.hidden = true;
       then();
-    }, 1500);
+    }, 1000);
   }
 
   // ---- Expand takes over the whole feed box; collapse returns to the list ----
