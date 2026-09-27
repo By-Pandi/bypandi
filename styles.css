@@ -439,6 +439,7 @@ img {
   .reference-row {
   flex-direction: column;
   gap: 4px;
+  }
 }
 
 
