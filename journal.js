@@ -1,19 +1,18 @@
 /*
   journal.js — builds the Journal feed from the journalPosts list
   (defined in journal.html, right before this file is loaded), then
-  powers all the interactions: expand/collapse with loading screens,
-  search, topic filtering, and the custom scroll rail.
+  powers all the interactions: expand/collapse with a full-box
+  loading screen, search, topic filtering, and the custom scroll rail.
 
   TO ADD A NEW POST: open journal.html, find the journalPosts array,
   copy one entry, and fill in your own topic/date/location/title/
   body. Nothing in THIS file needs to change.
 
-  Each post is written ONCE — there's no separate "preview" text to
-  keep in sync. When collapsed, CSS clips the content to a peek and
-  fades it out; clicking expands it to full height. Write "body" as
-  paragraphs (<p>...</p>), and drop an image in anywhere with:
-    <img src="images/yourphoto.jpg" alt="">
-    <p class="post-image-caption">Optional caption</p>
+  Clicking a post: the whole feed box flashes that post's topic
+  color with the logo for 1.5s, then that post takes over the whole
+  box (other posts hide) — scrolling inside it if it's long. Clicking
+  - or x does the same in reverse (white flash, black logo) back to
+  the list.
 */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -47,41 +46,49 @@ document.addEventListener('DOMContentLoaded', function () {
       '<div class="post-content">' +
         '<h3 class="post-title">' + post.title + '</h3>' +
         post.body +
-      '</div>' +
-      '<div class="post-loading" hidden><div class="loading-logo">' + pandaLogoSVG + '</div></div>';
+      '</div>';
 
     feed.appendChild(el);
   });
 
-  // ---- Expand / collapse, with the loading transition ----
+  // ---- Shared full-box loading overlay ----
+  const loading = document.getElementById('feed-loading');
+  const loadingLogo = loading.querySelector('.loading-logo');
+
+  function runLoading(bgColor, logoColor, then) {
+    loading.hidden = false;
+    loading.style.background = bgColor;
+    loadingLogo.style.color = logoColor;
+
+    setTimeout(function () {
+      loading.hidden = true;
+      then();
+    }, 1500);
+  }
+
+  // ---- Expand takes over the whole feed box; collapse returns to the list ----
   const posts = feed.querySelectorAll('.journal-post');
 
   posts.forEach(function (post) {
     const content = post.querySelector('.post-content');
-    const loading = post.querySelector('.post-loading');
-    const loadingLogo = loading.querySelector('.loading-logo');
     const topicColor = post.style.getPropertyValue('--topic-color');
 
-    function runLoading(bgColor, logoColor, expand) {
-      loading.hidden = false;
-      loading.style.background = bgColor;
-      loadingLogo.style.color = logoColor;
-
-      setTimeout(function () {
-        loading.hidden = true;
-        post.classList.toggle('is-expanded', expand);
-      }, 1500);
-    }
-
     content.addEventListener('click', function () {
-      if (post.classList.contains('is-expanded')) return; // already open, clicks on text don't collapse it
-      runLoading(topicColor, '#ffffff', true);
+      if (post.classList.contains('is-expanded')) return;
+      runLoading(topicColor, '#ffffff', function () {
+        feed.classList.add('has-expanded');
+        post.classList.add('is-expanded');
+        feed.scrollTop = 0;
+      });
     });
 
     post.querySelectorAll('.post-minimize, .post-close').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.stopPropagation();
-        runLoading('#ffffff', '#111111', false);
+        runLoading('#ffffff', '#111111', function () {
+          feed.classList.remove('has-expanded');
+          post.classList.remove('is-expanded');
+        });
       });
     });
   });
