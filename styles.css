@@ -549,14 +549,19 @@ img {
 .intro-body {
   background: var(--color-red);
   color: var(--color-white);
-  padding: 8px 40px 32px 40px;
-  text-align: center;
+  padding: 8px 24px 32px 24px;
   font-size: 1rem;
   line-height: 1.6;
 }
 
+.intro-body p {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 .section-label {
-  text-align: center;
+  text-align: left;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
