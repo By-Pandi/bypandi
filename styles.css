@@ -119,7 +119,7 @@ img {
   display: flex;
   align-items: center;
   gap: 32px;
-  padding: 64px 48px;
+  padding: 140px 48px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -477,4 +477,95 @@ img {
   .receipt-total-row {
     font-size: 0.8rem;
   }
+}
+
+/* ==========================================================
+   PROJECT PAGES (Ceramic Archive, and same pattern for others)
+   ========================================================== */
+
+.project-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 80px 24px;
+}
+
+.project-tag {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.project-title {
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 8px 0 16px 0;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 32px;
+}
+
+.project-doodle {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto 32px auto;
+}
+
+/* Black rounded number/General buttons */
+.gallery-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.gallery-nav a {
+  background: var(--color-black);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 18px;
+  border-radius: 20px;
+}
+
+.gallery-nav a.active {
+  background: var(--color-green);
+}
+
+.gallery-panel {
+  display: none;
+}
+
+.gallery-panel.active {
+  display: block;
+}
+
+.gallery-panel-title {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.gallery-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.gallery-stack img {
+  max-width: 100%;
+  max-height: 520px;
+  width: auto;
+  height: auto;
 }
