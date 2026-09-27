@@ -32,6 +32,7 @@ body {
   font-family: var(--font-main);
   color: var(--color-black);
   background: var(--color-white);
+  overflow-x: hidden;
 }
 
 a {
@@ -41,15 +42,6 @@ a {
 img {
   max-width: 100%;
   display: block;
-}
-
-/* Caps content width so it stays proportional on wide screens,
-   while backgrounds (nav, receipt photo, green section, footer)
-   still stretch full-bleed edge to edge. */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
 }
 
 /* ==========================================================
@@ -118,6 +110,7 @@ img {
 .hero {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 32px;
   padding: 140px 48px;
   max-width: 1200px;
@@ -182,7 +175,7 @@ img {
   margin: 0 auto;
   background-image: url("images/paper-texture.png");
   background-size: cover;
-  background-color: #f5f5f0; /* fallback while paper-texture.png isn't uploaded yet */
+  background-color: #f5f5f0; /* fallback if paper-texture.png is ever missing */
   padding: 32px 28px;
   font-size: 0.9rem;
 }
@@ -279,8 +272,8 @@ img {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 32px;
+  justify-content: center;
+  gap: 100px;
   flex-wrap: wrap;
 }
 
@@ -291,70 +284,28 @@ img {
   text-decoration: none;
 }
 
-/* The little browser-mockup card — built entirely with code, no image */
+/* The little card — the real SVG you provided, embedded directly */
 .journal-teaser-card {
-  border: 2px solid var(--color-pink);
   width: 340px;
-  height: 300px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  height: 340px;
   text-decoration: none;
-  color: var(--color-pink);
   flex-shrink: 0;
 }
 
-.journal-teaser-card-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.journal-teaser-card-logo {
-  width: 44px;
-  height: auto;
-  color: var(--color-pink);
-}
-
-.journal-teaser-card-logo svg {
+.journal-teaser-card svg {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
-.journal-teaser-card-dash {
-  width: 32px;
-  height: 4px;
-  background: var(--color-pink);
+.teaser-arrow-group {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.2s ease;
 }
 
-.journal-teaser-arrow-box {
-  background: var(--color-pink);
-  width: 110px;
-  height: 110px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.journal-teaser-arrow-box svg {
-  width: 54px;
-  height: 54px;
-  color: var(--color-green);
-}
-
-.journal-teaser-card-lines {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.journal-teaser-card-lines span {
-  display: block;
-  height: 2px;
-  background: var(--color-pink);
+.journal-teaser-card:hover .teaser-arrow-group {
+  transform: scale(1.12);
 }
 
 /* ==========================================================
@@ -471,6 +422,14 @@ img {
   .journal-teaser-inner {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
+  }
+  .journal-teaser-title {
+    font-size: 3rem;
+  }
+  .journal-teaser-card {
+    width: 220px;
+    height: 220px;
   }
   .receipt-meta-row,
   .receipt-row,
@@ -568,4 +527,113 @@ img {
   max-height: 520px;
   width: auto;
   height: auto;
+}
+
+/* ==========================================================
+   FANZINE PAGE
+   ========================================================== */
+
+/* The red "blob" intro: a wave-cap, solid body, wave-cap flipped —
+   stacked with no gap, sitting on the plain white page. */
+.intro-wave {
+  display: block;
+  width: 100%;
+  height: 50px;
+  color: var(--color-red);
+}
+
+.intro-wave-flip {
+  transform: scaleY(-1);
+}
+
+.intro-body {
+  background: var(--color-red);
+  color: var(--color-white);
+  padding: 8px 40px 32px 40px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.section-label {
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 40px 0 24px 0;
+}
+
+.pager {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.pager-image {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}
+
+.pager-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.pager-prev,
+.pager-next {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: var(--color-red);
+  cursor: pointer;
+  padding: 8px;
+}
+
+.pager-prev:hover,
+.pager-next:hover {
+  color: var(--color-black);
+}
+
+/* Reference rows — black bars, white text, traffic-light hover color set by JS */
+.reference-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--color-black);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 12px 20px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.reference-row:hover {
+  transform: scale(1.02) translateX(4px);
+}
+
+.bts-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.bts-images img {
+  max-width: 100%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+}
+
+.copy-cta {
+  text-align: center;
+  font-weight: 700;
+  margin: 40px 0;
 }
