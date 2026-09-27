@@ -735,10 +735,22 @@ img {
   height: 600px;
   border: 2px solid var(--color-black);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.journal-feed-title {
+  background: var(--color-black);
+  color: var(--color-white);
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  flex-shrink: 0;
 }
 
 .journal-feed {
-  height: 100%;
+  flex: 1;
   overflow-y: auto;
   padding: 16px;
   scrollbar-width: none;
@@ -789,22 +801,12 @@ img {
   cursor: pointer;
 }
 
-.post-collapsed,
-.post-expanded {
-  padding: 14px;
-  cursor: pointer;
-}
-
-.post-expanded {
-  cursor: default;
-}
-
 .post-meta-row {
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
   color: #777;
-  margin-bottom: 8px;
+  padding: 10px 14px 0 14px;
 }
 
 .post-title {
@@ -812,18 +814,21 @@ img {
   margin-bottom: 8px;
 }
 
-.post-preview-text {
-  font-size: 0.85rem;
-  color: #333;
+/* ONE content block, written once. Truncated by default; the JS
+   removes the truncation (via .is-expanded on the parent post)
+   instead of swapping to a separate duplicated block. */
+.post-content {
+  padding: 10px 14px 14px 14px;
+  cursor: pointer;
 }
 
-.post-body p {
+.post-content p {
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 14px;
 }
 
-.post-body img {
+.post-content img {
   width: 100%;
   max-height: 300px;
   object-fit: cover;
@@ -834,6 +839,26 @@ img {
   font-size: 0.75rem;
   color: #888;
   margin-bottom: 14px !important;
+}
+
+.journal-post:not(.is-expanded) .post-content {
+  max-height: 100px;
+  overflow: hidden;
+  position: relative;
+}
+
+.journal-post:not(.is-expanded) .post-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.journal-post.is-expanded .post-content {
+  cursor: default;
 }
 
 .post-loading {
