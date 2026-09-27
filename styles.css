@@ -436,7 +436,11 @@ img {
   .receipt-total-row {
     font-size: 0.8rem;
   }
+  .reference-row {
+  flex-direction: column;
+  gap: 4px;
 }
+
 
 /* ==========================================================
    PROJECT PAGES (Ceramic Archive, and same pattern for others)
