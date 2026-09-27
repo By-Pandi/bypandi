@@ -41,10 +41,6 @@
     </div>
   </header>
 
-  <div class="journal-title-bar">
-    <h1>JOURNAL</h1>
-  </div>
-
   <div class="journal-layout">
 
     <!-- SIDEBAR -->
@@ -82,144 +78,65 @@
     <!-- FEED -->
     <div class="journal-feed-wrap">
       <div class="journal-feed" id="journal-feed">
-
-        <!--
-          POSTS
-          TO ADD A NEW ONE LATER: copy a whole .journal-post block,
-          give it a fresh data-topic + matching --topic-color, and
-          edit the text/images inside .post-collapsed / .post-expanded.
-        -->
-
-        <div class="journal-post" data-topic="reviews" style="--topic-color: var(--color-pink);">
-          <div class="post-collapsed">
-            <div class="post-header">
-              <span class="post-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></span>
-              <span class="post-controls">
-                <button class="post-btn post-minimize">─</button>
-                <button class="post-btn post-close">✕</button>
-              </span>
-            </div>
-            <div class="post-meta-row">
-              <span>17/09/2026</span>
-              <span>München, Germany</span>
-            </div>
-            <h3 class="post-title"># A review worth writing down</h3>
-            <p class="post-preview-text">A short preview of the review goes here — a couple of lines is enough to pull someone in before they click to read the rest…</p>
-          </div>
-
-          <div class="post-expanded" hidden>
-            <div class="post-header">
-              <span class="post-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></span>
-              <span class="post-controls">
-                <button class="post-btn post-minimize">─</button>
-                <button class="post-btn post-close">✕</button>
-              </span>
-            </div>
-            <div class="post-meta-row">
-              <span>17/09/2026</span>
-              <span>München, Germany</span>
-            </div>
-            <div class="post-body">
-              <h3 class="post-title"># A review worth writing down</h3>
-              <p>Write your full review here. Mix in as many images as you want, wherever they fit best in the writing — just drop in an &lt;img&gt; tag and, if you want, a small caption line underneath it.</p>
-              <img src="images/placeholder-post-image.jpg" alt="">
-              <p class="post-image-caption">Image rights or any important item</p>
-              <p>Keep writing after the image — paragraphs and images can repeat in any order, as many times as the post needs.</p>
-            </div>
-          </div>
-
-          <div class="post-loading" hidden>
-            <div class="loading-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></div>
-          </div>
-        </div>
-
-        <div class="journal-post" data-topic="diary" style="--topic-color: var(--color-green);">
-          <div class="post-collapsed">
-            <div class="post-header">
-              <span class="post-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></span>
-              <span class="post-controls">
-                <button class="post-btn post-minimize">─</button>
-                <button class="post-btn post-close">✕</button>
-              </span>
-            </div>
-            <div class="post-meta-row">
-              <span>10/09/2026</span>
-              <span>München, Germany</span>
-            </div>
-            <h3 class="post-title"># Just a normal Tuesday</h3>
-            <p class="post-preview-text">Diary entries can be shorter and more personal, nothing fancy — just what happened and how it felt.</p>
-          </div>
-
-          <div class="post-expanded" hidden>
-            <div class="post-header">
-              <span class="post-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></span>
-              <span class="post-controls">
-                <button class="post-btn post-minimize">─</button>
-                <button class="post-btn post-close">✕</button>
-              </span>
-            </div>
-            <div class="post-meta-row">
-              <span>10/09/2026</span>
-              <span>München, Germany</span>
-            </div>
-            <div class="post-body">
-              <h3 class="post-title"># Just a normal Tuesday</h3>
-              <p>Diary posts might not need an image at all — that's fine, just leave the image lines out entirely for a text-only entry like this one.</p>
-            </div>
-          </div>
-
-          <div class="post-loading" hidden>
-            <div class="loading-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></div>
-          </div>
-        </div>
-
-        <div class="journal-post" data-topic="exploration" style="--topic-color: var(--color-red);">
-          <div class="post-collapsed">
-            <div class="post-header">
-              <span class="post-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></span>
-              <span class="post-controls">
-                <button class="post-btn post-minimize">─</button>
-                <button class="post-btn post-close">✕</button>
-              </span>
-            </div>
-            <div class="post-meta-row">
-              <span>02/09/2026</span>
-              <span>Wien, Austria</span>
-            </div>
-            <h3 class="post-title"># Wandering somewhere new</h3>
-            <p class="post-preview-text">Exploration posts are a good place for travel notes, new techniques, or anything you tried out for the first time.</p>
-          </div>
-
-          <div class="post-expanded" hidden>
-            <div class="post-header">
-              <span class="post-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></span>
-              <span class="post-controls">
-                <button class="post-btn post-minimize">─</button>
-                <button class="post-btn post-close">✕</button>
-              </span>
-            </div>
-            <div class="post-meta-row">
-              <span>02/09/2026</span>
-              <span>Wien, Austria</span>
-            </div>
-            <div class="post-body">
-              <h3 class="post-title"># Wandering somewhere new</h3>
-              <p>You can add more than one image in a single post too — just repeat the image + caption pattern as many times as you need.</p>
-              <img src="images/placeholder-post-image.jpg" alt="">
-              <p class="post-image-caption">Image rights or any important item</p>
-              <img src="images/placeholder-post-image.jpg" alt="">
-              <p class="post-image-caption">Image rights or any important item</p>
-              <p>And close with more text, if that's what the post needs.</p>
-            </div>
-          </div>
-
-          <div class="post-loading" hidden>
-            <div class="loading-logo"><svg viewBox="0 0 1124 623" preserveAspectRatio="xMidYMid meet"><use href="#pandi-logo"></use></svg></div>
-          </div>
-        </div>
-
+        <!-- Posts are built automatically by journal.js from the list below -->
       </div>
     </div>
+
+    <!--
+      YOUR POSTS
+      TO ADD A NEW ONE: copy one entry below (the part between { and
+      }, including the comma after it), paste it in the list, and
+      edit topic/date/location/title/body. That's the whole process
+      — no other HTML to write or duplicate.
+
+      - topic: must be "reviews", "diary", or "exploration"
+      - body: the full post, written once. When collapsed, it's
+        automatically clipped to a short peek with a fade — clicking
+        expands it to full height. Write paragraphs as <p>...</p>.
+        Add an image anywhere with:
+          <img src="images/yourphoto.jpg" alt="">
+          <p class="post-image-caption">Optional caption</p>
+        Repeat paragraphs/images in any order, as many times as needed.
+    -->
+    <script>
+      const journalPosts = [
+        {
+          topic: 'reviews',
+          date: '17/09/2026',
+          location: 'München, Germany',
+          title: '# A review worth writing down',
+          body: `
+            <p>Write your full review here. Mix in as many images as you want, wherever they fit best in the writing — just drop in an &lt;img&gt; tag and, if you want, a small caption line underneath it.</p>
+            <img src="images/placeholder-post-image.jpg" alt="">
+            <p class="post-image-caption">Image rights or any important item</p>
+            <p>Keep writing after the image — paragraphs and images can repeat in any order, as many times as the post needs.</p>
+          `
+        },
+        {
+          topic: 'diary',
+          date: '10/09/2026',
+          location: 'München, Germany',
+          title: '# Just a normal Tuesday',
+          body: `
+            <p>Diary posts might not need an image at all — that's fine, just leave the image lines out entirely for a text-only entry like this one.</p>
+          `
+        },
+        {
+          topic: 'exploration',
+          date: '02/09/2026',
+          location: 'Wien, Austria',
+          title: '# Wandering somewhere new',
+          body: `
+            <p>You can add more than one image in a single post too — just repeat the image + caption pattern as many times as you need.</p>
+            <img src="images/placeholder-post-image.jpg" alt="">
+            <p class="post-image-caption">Image rights or any important item</p>
+            <img src="images/placeholder-post-image.jpg" alt="">
+            <p class="post-image-caption">Image rights or any important item</p>
+            <p>And close with more text, if that's what the post needs.</p>
+          `
+        }
+      ];
+    </script>
 
     <!-- CUSTOM SCROLL RAIL -->
     <div class="journal-scroll-rail">
