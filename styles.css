@@ -496,7 +496,7 @@ img {
 }
 
 .gallery-nav a.active {
-  background: var(--color-green);
+  background: var(--color-pink);
 }
 
 .gallery-panel {
