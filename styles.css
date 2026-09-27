@@ -492,11 +492,11 @@ img {
   font-weight: 700;
   font-size: 0.85rem;
   padding: 8px 18px;
-  border-radius: 20px;
+  border-radius: 1px;
 }
 
 .gallery-nav a.active {
-  background: var(--color-green);
+  background: var(--color-pink);
 }
 
 .gallery-panel {
