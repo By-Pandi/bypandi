@@ -760,6 +760,15 @@ img {
   display: none;
 }
 
+.feed-title-bar {
+  background: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px;
+}
+
 .journal-post {
   position: relative;
   border: 3px solid var(--topic-color);
