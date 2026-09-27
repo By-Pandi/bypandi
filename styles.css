@@ -2,13 +2,7 @@
   styles.css — shared across every page of the new site.
 
   PALETTE (confirmed from your mockups):
-    black:  #000000
-    white:  #ffffff
-    green:  #008109
-    pink:   #ff91e0
-    red:    #cb1c23
-    orange: #ff8c23  (traffic-light hover only)
-
+    black:  #000000 / white:  #ffffff / green:  #008109 / pink:   #ff91e0 / red:    #cb1c23 / orange: #ff8c23  (traffic-light hover only)
   FONT: Montserrat, weights 400 and 700 only.
 */
 
@@ -219,8 +213,7 @@ img {
 
 /*
   Each project row: name on the left, category + arrow on the right.
-  TO ADD A NEW ROW LATER: copy one whole .receipt-row block, change
-  the text and the href.
+  TO ADD A NEW ROW LATER: copy one whole .receipt-row block, change the text and the href.
 */
 .receipt-row {
   display: flex;
@@ -538,8 +531,7 @@ img {
    FANZINE PAGE
    ========================================================== */
 
-/* The red "blob" intro: a wave-cap, solid body, wave-cap flipped —
-   stacked with no gap, sitting on the plain white page. */
+/* The red "blob" intro: a wave-cap, solid body, wave-cap flipped — stacked with no gap, sitting on the plain white page. */
 .intro-wave {
   display: block;
   width: 100%;
@@ -790,8 +782,7 @@ img {
   display: block;
 }
 
-/* While a post is expanded, hide every other post so the open one
-   takes over the whole feed box */
+/* While a post is expanded, hide every other post so the open one takes over the whole feed box */
 .journal-feed.has-expanded .journal-post:not(.is-expanded) {
   display: none;
 }
@@ -854,8 +845,7 @@ img {
   margin-bottom: 8px;
 }
 
-/* ONE content block, written once. Truncated by default; the JS
-   removes the truncation (via .is-expanded on the parent post)
+/* ONE content block, written once. Truncated by default; the JS removes the truncation (via .is-expanded on the parent post)
    instead of swapping to a separate duplicated block. */
 .post-content {
   padding: 10px 14px 14px 14px;
