@@ -27,6 +27,9 @@ body {
   color: var(--color-black);
   background: var(--color-white);
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -340,6 +343,7 @@ img {
   padding: 48px 32px;
   text-align: center;
   position: relative;
+  margin-top: auto;
 }
 
 .site-footer .back-to-top {
