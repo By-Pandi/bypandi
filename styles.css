@@ -653,7 +653,7 @@ img {
   display: grid;
   grid-template-columns: 220px 1fr 40px;
   gap: 20px;
-  max-width: 1200px;
+  max-width: clamp(1100px, 85vw, 1800px);
   margin: 32px auto;
   padding: 0 24px;
 }
@@ -735,7 +735,7 @@ img {
 /* Feed */
 .journal-feed-wrap {
   position: relative;
-    height: min(75vh, 800px);
+  height: clamp(500px, 70vh, 850px);
   border: 2px solid var(--color-black);
   overflow: hidden;
   display: flex;
@@ -840,7 +840,7 @@ img {
 .post-meta-row {
   display: flex;
   justify-content: space-between;
-  font-size: 0.75rem;
+  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.05rem);
   color: #777;
   padding: 10px 14px 0 14px;
 }
@@ -848,6 +848,7 @@ img {
 .post-title {
   font-weight: 700;
   margin-bottom: 8px;
+  font-size: clamp(1rem, 0.7rem + 1vw, 1.3rem);
 }
 
 /* ONE content block, written once. Truncated by default; the JS removes the truncation (via .is-expanded on the parent post)
