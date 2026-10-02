@@ -730,7 +730,7 @@ img {
 /* Feed */
 .journal-feed-wrap {
   position: relative;
-  height: 600px;
+    height: min(75vh, 800px);
   border: 2px solid var(--color-black);
   overflow: hidden;
   display: flex;
