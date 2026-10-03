@@ -659,7 +659,7 @@ img {
 }
 
 .bts-images img {
-  max-width: 900;
+  max-width: 900px;
   max-height: clamp(400px, 55vh, 800px);;
   width: auto;
   height: auto;
