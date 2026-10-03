@@ -581,6 +581,9 @@ img {
   padding: 8px 24px 32px 24px;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+.intro-body-inner {
   max-width: clamp(900px, 75vw, 1600px);
   margin: 0 auto;
 }
