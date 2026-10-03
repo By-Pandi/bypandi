@@ -568,7 +568,7 @@ img {
 }
 
 .intro-body p {
-  max-width: 900px;
+  max-width: clamp(900px, 75vw, 1600px);
   margin: 0 auto;
   text-align: left;
 }
