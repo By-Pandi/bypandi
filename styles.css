@@ -605,6 +605,7 @@ img {
 .section-label {
   text-align: left;
   font-weight: 700;
+  font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.2rem);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 40px 0 24px 0;
