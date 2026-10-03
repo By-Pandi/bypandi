@@ -537,7 +537,7 @@ img {
 
 .gallery-stack img {
   max-width: 100%;
-  max-height: 520px;
+  max-height: max-height: clamp(400px, 55vh, 800px);
   width: auto;
   height: auto;
 }
@@ -589,7 +589,7 @@ img {
 
 .pager-image {
   max-width: 100%;
-  max-height: 500px;
+  max-height: clamp(400px, 55vh, 800px);
   width: auto;
   height: auto;
 }
@@ -645,7 +645,7 @@ img {
 
 .bts-images img {
   max-width: 100%;
-  max-height: 500px;
+  max-height: max-height: clamp(400px, 55vh, 800px);
   width: auto;
   height: auto;
 }
