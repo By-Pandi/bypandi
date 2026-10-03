@@ -656,7 +656,7 @@ img {
   text-decoration: none;
   padding: 12px 20px;
   margin-bottom: 8px;
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.15rem);
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
