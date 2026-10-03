@@ -865,7 +865,7 @@ img {
 .post-title {
   font-weight: 700;
   margin-bottom: 8px;
-  font-size: clamp(1rem, 0.7rem + 1vw, 1.3rem);
+  font-size: clamp(1rem, 0.7rem + 1vw, 2rem);
 }
 
 /* ONE content block, written once. Truncated by default; the JS removes the truncation (via .is-expanded on the parent post)
@@ -876,7 +876,7 @@ img {
 }
 
 .post-content p {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.05rem);
   line-height: 1.6;
   margin-bottom: 14px;
 }
