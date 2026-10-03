@@ -447,24 +447,40 @@ img {
 /* ==========================================================
    PROJECT PAGES (Ceramic Archive, and same pattern for others)
    ========================================================== */
-
+ 
 .project-page {
-  max-width: clamp(900px, 75vw, 1600px);
+  max-width: 900px;
   margin: 0 auto;
   padding: 48px 24px 80px 24px;
 }
-
+ 
+@media (min-width: 1400px) {
+  .project-page { max-width: 1200px; }
+}
+ 
+@media (min-width: 1900px) {
+  .project-page { max-width: 1600px; }
+}
+ 
 .project-tag {
-  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.1rem);
+  font-size: 1rem;
   color: #888;
 }
-
+ 
 .project-title {
   font-weight: 700;
-  font-size: clamp(3rem, 2.3rem + 2vw, 4.5rem);
+  font-size: 3rem;
   margin: 8px 0 16px 0;
 }
-
+ 
+@media (min-width: 1400px) {
+  .project-title { font-size: 3.75rem; }
+}
+ 
+@media (min-width: 1900px) {
+  .project-title { font-size: 4.5rem; }
+}
+ 
 .project-meta {
   display: flex;
   justify-content: space-between;
@@ -473,21 +489,15 @@ img {
   border-bottom: 1px solid #eee;
   margin-bottom: 32px;
 }
-
-.doodle-breakout {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-}
-
+ 
 .project-doodle {
   width: 100%;
-  max-width: 1100px;
+  max-width: 700px;
   height: auto;
   display: block;
   margin: 0 auto 32px auto;
 }
-
+ 
 /* Black rounded number/General buttons */
 .gallery-nav {
   display: flex;
@@ -496,7 +506,7 @@ img {
   gap: 10px;
   margin-bottom: 40px;
 }
-
+ 
 .gallery-nav a {
   background: var(--color-black);
   color: var(--color-white);
@@ -506,40 +516,49 @@ img {
   padding: 8px 18px;
   border-radius: 1px;
 }
-
+ 
 .gallery-nav a.active {
   background: var(--color-pink);
 }
-
+ 
 .gallery-panel {
   display: none;
 }
-
+ 
 .gallery-panel.active {
   display: block;
 }
-
+ 
 .gallery-panel-title {
   text-align: center;
   font-weight: 700;
-  font-size: clamp(1rem, 0.85rem + 0.6vw, 1.5rem);
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 24px;
 }
-
+ 
+@media (min-width: 1400px) {
+  .gallery-panel-title { font-size: 1.3rem; }
+}
+ 
+@media (min-width: 1900px) {
+  .gallery-panel-title { font-size: 1.5rem; }
+}
+ 
 .gallery-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
-
+ 
 .gallery-stack img {
-  width: 100%;
+  max-width: 100%;
+  max-height: clamp(400px, 55vh, 800px);
+  width: auto;
   height: auto;
 }
-
 /* ==========================================================
    FANZINE PAGE
    ========================================================== */
