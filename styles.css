@@ -449,19 +449,19 @@ img {
    ========================================================== */
 
 .project-page {
-  max-width: 900px;
+  max-width: clamp(900px, 75vw, 1600px);
   margin: 0 auto;
   padding: 48px 24px 80px 24px;
 }
 
 .project-tag {
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.1rem);
   color: #888;
 }
 
 .project-title {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: clamp(3rem, 2.3rem + 2vw, 4.5rem);
   margin: 8px 0 16px 0;
 }
 
@@ -522,6 +522,7 @@ img {
 .gallery-panel-title {
   text-align: center;
   font-weight: 700;
+  font-size: clamp(1rem, 0.85rem + 0.6vw, 1.5rem);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 24px;
@@ -663,7 +664,8 @@ img {
   display: grid;
   grid-template-columns: 220px 1fr 40px;
   gap: 20px;
-  max-width: clamp(1100px, 85vw, 1800px);
+  grid-template-columns: clamp(220px, 15vw, 320px) 1fr clamp(40px, 3vw, 60px);
+  max-width: clamp(1100px, 92vw, 2400px);
   margin: 32px auto;
   padding: 0 24px;
 }
