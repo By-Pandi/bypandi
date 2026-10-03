@@ -164,7 +164,7 @@ img {
   background-image: url("images/background.jpg");
   background-size: cover;
   background-position: center;
-  padding: 80px 24px;
+  padding: 160px 24px;
 }
 
 .receipt-card {
@@ -173,7 +173,7 @@ img {
   background-image: url("images/paper-texture.png");
   background-size: cover;
   background-color: #f5f5f0; /* fallback if paper-texture.png is ever missing */
-  padding: 32px 28px;
+  padding: 64px 28px;
   font-size: 1.5rem;
 }
 
@@ -245,13 +245,7 @@ img {
   height: 50px;
   margin: 20px auto 0 auto;
   max-width: 320px;
-  background-image: repeating-linear-gradient(
-    to right,
-    #111 0px, #111 2px,
-    transparent 2px, transparent 5px,
-    #111 5px, #111 6px,
-    transparent 6px, transparent 10px
-  );
+  background-image: linear-gradient(to right, #111 0%, #111 3%, #fff 3%, #fff 4%, #111 4%, #111 5%, #fff 5%, #fff 8%, #111 8%, #111 9%, #fff 9%, #fff 10%, #111 10%, #111 11%, #fff 11%, #fff 12%, #111 12%, #111 15%, #fff 15%, #fff 16%, #111 16%, #111 19%, #fff 19%, #fff 22%, #111 22%, #111 24%, #fff 24%, #fff 25%, #111 25%, #111 27%, #fff 27%, #fff 29%, #111 29%, #111 30%, #fff 30%, #fff 31%, #111 31%, #111 32%, #fff 32%, #fff 33%, #111 33%, #111 34%, #fff 34%, #fff 36%, #111 36%, #111 38%, #fff 38%, #fff 39%, #111 39%, #111 41%, #fff 41%, #fff 42%, #111 42%, #111 45%, #fff 45%, #fff 48%, #111 48%, #111 51%, #fff 51%, #fff 53%, #111 53%, #111 55%, #fff 55%, #fff 56%, #111 56%, #111 58%, #fff 58%, #fff 60%, #111 60%, #111 61%, #fff 61%, #fff 65%, #111 65%, #111 69%, #fff 69%, #fff 70%, #111 70%, #111 74%, #fff 74%, #fff 78%, #111 78%, #111 79%, #fff 79%, #fff 82%, #111 82%, #111 84%, #fff 84%, #fff 85%, #111 85%, #111 86%, #fff 86%, #fff 87%, #111 87%, #111 88%, #fff 88%, #fff 92%, #111 92%, #111 93%, #fff 93%, #fff 94%, #111 94%, #111 95%, #fff 95%, #fff 97%, #111 97%, #111 98%, #fff 98%, #fff 99%, #111 99%, #111 100%);
 }
 
 /* ==========================================================
