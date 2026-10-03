@@ -536,9 +536,7 @@ img {
 }
 
 .gallery-stack img {
-  max-width: 100%;
-  max-height: max-height: clamp(400px, 55vh, 800px);
-  width: auto;
+  width: 100%;
   height: auto;
 }
 
