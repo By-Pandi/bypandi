@@ -794,11 +794,19 @@ img {
 /* Feed */
 .journal-feed-wrap {
   position: relative;
-  height: clamp(500px, 70vh, 850px);
+  height: 500px;
   border: 2px solid var(--color-black);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 1400px) {
+  .journal-feed-wrap { height: 650px; }
+}
+
+@media (min-width: 1900px) {
+  .journal-feed-wrap { height: 850px; }
 }
 
 .journal-feed-title {
@@ -899,7 +907,7 @@ img {
 .post-meta-row {
   display: flex;
   justify-content: space-between;
-  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.05rem);
+  font-size: 0.9rem;
   color: #777;
   padding: 10px 14px 0 14px;
 }
@@ -907,7 +915,17 @@ img {
 .post-title {
   font-weight: 700;
   margin-bottom: 8px;
-  font-size: clamp(1rem, 0.7rem + 1vw, 2rem);
+  font-size: 1rem;
+}
+
+@media (min-width: 1400px) {
+  .post-meta-row { font-size: 1rem; }
+  .post-title { font-size: 1.3rem; }
+}
+
+@media (min-width: 1900px) {
+  .post-meta-row { font-size: 1.1rem; }
+  .post-title { font-size: 1.6rem; }
 }
 
 /* ONE content block, written once. Truncated by default; the JS removes the truncation (via .is-expanded on the parent post)
@@ -918,10 +936,17 @@ img {
 }
 
 .post-content p {
-  font-size: clamp(0.9rem, 0.8rem + 0.3vw, 1.05rem);
+  font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 14px;
 }
+
+@media (min-width: 1400px) {
+  .post-content p { font-size: 0.98rem; }
+}
+
+@media (min-width: 1900px) {
+  .post-content p { font-size: 1.05rem; }
 
 .post-content img {
   width: 100%;
