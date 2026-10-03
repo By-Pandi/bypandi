@@ -941,6 +941,27 @@ img {
   background: var(--color-black);
 }
 
+/* WIP page */
+
+.wip-page {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.wip-image {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 32px auto;
+}
+
+.wip-text {
+  font-weight: 700;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 800px) {
   .journal-layout {
     grid-template-columns: 1fr;
