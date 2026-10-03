@@ -196,13 +196,6 @@ img {
   margin-bottom: 4px;
 }
 
-.receipt-subheading {
-  text-align: center;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 16px;
-}
-
 .receipt-rule {
   border-top: 1px dashed #999;
   margin: 16px 0;
