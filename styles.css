@@ -469,16 +469,14 @@ img {
  
 .project-title {
   font-weight: 700;
-  font-size: 3rem;
+  font-size: clamp(3rem, 2.3rem + 2vw, 4.5rem);
   margin: 8px 0 16px 0;
 }
- 
-@media (min-width: 1400px) {
-  .project-title { font-size: 3.75rem; }
-}
- 
-@media (min-width: 1900px) {
-  .project-title { font-size: 4.5rem; }
+
+.archive-header {
+  max-width: clamp(900px, 75vw, 1600px);
+  margin: 0 auto;
+  padding: 48px 24px 32px 24px;
 }
  
 .project-meta {
@@ -662,7 +660,7 @@ img {
 
 .bts-images img {
   max-width: 100%;
-  max-height: max-height: clamp(400px, 55vh, 800px);
+  max-height: clamp(400px, 55vh, 800px);;
   width: auto;
   height: auto;
 }
