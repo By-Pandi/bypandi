@@ -945,11 +945,11 @@ img {
 
 .wip-page {
   text-align: center;
-  padding: 80px 24px;
+  padding: 180px 24px;
 }
 
 .wip-image {
-  max-width: 480px;
+  max-width: 700px;
   width: 100%;
   height: auto;
   margin: 0 auto 32px auto;
@@ -957,7 +957,7 @@ img {
 
 .wip-text {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
