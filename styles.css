@@ -580,11 +580,21 @@ img {
   padding: 8px 24px 32px 24px;
   font-size: 1rem;
   line-height: 1.6;
+  max-width: clamp(900px, 75vw, 1600px);
+  margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+  .intro-body { font-size: 1.1rem; }
+}
+
+@media (min-width: 1900px) {
+  .intro-body { font-size: 1.2rem; }
 }
 
 .intro-body p {
-  max-width: clamp(900px, 75vw, 1100px);
-  margin: 0 auto;
+  max-width: 700px;
+  margin: 0;
   text-align: left;
 }
 
