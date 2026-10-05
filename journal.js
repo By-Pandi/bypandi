@@ -98,7 +98,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const topicChips = document.querySelectorAll('.topic-chip');
 
   function applyFilter(topic, searchText) {
+    feed.classList.remove('has-expanded');
     posts.forEach(function (post) {
+      post.classList.remove('is-expanded');
       const matchesTopic = !topic || post.dataset.topic === topic;
       const text = post.textContent.toLowerCase();
       const matchesSearch = !searchText || text.includes(searchText.toLowerCase());
@@ -131,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const thumb = document.querySelector('.scroll-thumb');
   const upBtn = document.querySelector('.scroll-up');
   const downBtn = document.querySelector('.scroll-down');
+
 
   function updateThumb() {
     const trackHeight = track.clientHeight;
