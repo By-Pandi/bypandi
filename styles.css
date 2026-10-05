@@ -418,6 +418,9 @@ img {
     flex-direction: column;
     text-align: center;
   }
+  .nav-logo {
+    display: none;
+  }
   .hero-title {
     font-size: 2.25rem;
   }
