@@ -1009,11 +1009,11 @@ img {
 
 .wip-page {
   text-align: center;
-  padding: 100px 24px;
+  padding: 60px 24px;
 }
 
 .wip-image {
-  max-width: 600px;
+  max-width: 500px;
   width: 100%;
   height: auto;
   margin: 0 auto 32px auto;
@@ -1021,7 +1021,7 @@ img {
 
 .wip-text {
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
