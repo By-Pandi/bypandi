@@ -692,25 +692,11 @@ img {
 
 .journal-layout {
   display: grid;
-  grid-template-columns: 220px 1fr 40px;
+  grid-template-columns: 240px 1fr 50px;
   gap: 20px;
-  max-width: 1100px;
+  max-width: 1400px;
   margin: 32px auto;
   padding: 0 24px;
-}
-
-@media (min-width: 1400px) {
-  .journal-layout {
-    grid-template-columns: 260px 1fr 50px;
-    max-width: 1700px;
-  }
-}
-
-@media (min-width: 1900px) {
-  .journal-layout {
-    grid-template-columns: 320px 1fr 60px;
-    max-width: 2400px;
-  }
 }
 
 /* Sidebar */
@@ -790,19 +776,11 @@ img {
 /* Feed */
 .journal-feed-wrap {
   position: relative;
-  height: 500px;
+  height: 650px;
   border: 2px solid var(--color-black);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-@media (min-width: 1400px) {
-  .journal-feed-wrap { height: 650px; }
-}
-
-@media (min-width: 1900px) {
-  .journal-feed-wrap { height: 850px; }
 }
 
 .journal-feed-title {
@@ -826,7 +804,6 @@ img {
   display: none;
 }
 
-/* One shared loading screen covering the whole box, used for every post */
 .feed-loading-overlay {
   position: absolute;
   inset: 0;
@@ -850,7 +827,6 @@ img {
   display: block;
 }
 
-/* While a post is expanded, hide every other post so the open one takes over the whole feed box */
 .journal-feed.has-expanded .journal-post:not(.is-expanded) {
   display: none;
 }
@@ -903,7 +879,7 @@ img {
 .post-meta-row {
   display: flex;
   justify-content: space-between;
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #777;
   padding: 10px 14px 0 14px;
 }
@@ -911,38 +887,19 @@ img {
 .post-title {
   font-weight: 700;
   margin-bottom: 8px;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
-@media (min-width: 1400px) {
-  .post-meta-row { font-size: 1rem; }
-  .post-title { font-size: 1.3rem; }
-}
-
-@media (min-width: 1900px) {
-  .post-meta-row { font-size: 1.1rem; }
-  .post-title { font-size: 1.6rem; }
-}
-
-/* ONE content block, written once. Truncated by default; the JS removes the truncation (via .is-expanded on the parent post)
-   instead of swapping to a separate duplicated block. */
 .post-content {
   padding: 10px 14px 14px 14px;
   cursor: pointer;
 }
 
 .post-content p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 14px;
 }
-
-@media (min-width: 1400px) {
-  .post-content p { font-size: 0.98rem; }
-}
-
-@media (min-width: 1900px) {
-  .post-content p { font-size: 1.05rem; }
 
 .post-content img {
   width: 100%;
