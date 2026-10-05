@@ -974,26 +974,6 @@ img {
   background: var(--color-black);
 }
 
-/* WIP page */
-
-.wip-page {
-  text-align: center;
-  padding: 180px 24px;
-}
-
-.wip-image {
-  max-width: 700px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto 32px auto;
-}
-
-.wip-text {
-  font-weight: 700;
-  font-size: 5rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
 
 @media (max-width: 800px) {
   .journal-layout {
@@ -1014,5 +994,39 @@ img {
 
   .sidebar-block:nth-child(2) {
     border-right: 2px solid var(--color-black);
+  }
+}
+
+/* WIP page */
+
+.wip-page {
+  text-align: center;
+  padding: 180px 24px;
+}
+
+.wip-image {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 32px auto;
+}
+
+.wip-text {
+  font-weight: 700;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (max-width: 700px) {
+  .wip-page {
+    padding: 80px 20px;
+  }
+
+  .wip-image {
+    max-width: 320px;
+  }
+
+  .wip-text {
+    font-size: 1.8rem;
   }
 }
