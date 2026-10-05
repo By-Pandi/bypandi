@@ -418,7 +418,7 @@ img {
     flex-direction: column;
     text-align: center;
   }
-  .nav-logo {
+  .nav-bar .nav-logo {
     display: none;
   }
   .hero-title {
