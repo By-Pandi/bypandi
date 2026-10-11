@@ -490,7 +490,7 @@ img {
 .project-meta {
   display: flex;
   justify-content: space-between;
-  gap: 60px;
+  gap: 100px;
   color: #666;
   padding-bottom: 16px;
   border-bottom: 1px solid #eee;
