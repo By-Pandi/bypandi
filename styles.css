@@ -566,6 +566,90 @@ img {
   height: auto;
 }
 /* ==========================================================
+   andiamo PAGE
+   ========================================================== */
+
+.info-block {
+  max-width: 900px;
+  margin: 0 auto 48px auto;
+}
+
+.info-row {
+  margin-bottom: 24px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  display: inline-block;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  margin-bottom: 8px;
+}
+
+.info-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.accordion-item {
+  max-width: 900px;
+  margin: 0 auto 16px auto;
+  border: 2px solid var(--color-black);
+}
+
+.accordion-header {
+  display: block;
+  width: 100%;
+  background: var(--color-black);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: left;
+  border: none;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.accordion-header:hover {
+  background: var(--color-pink);
+  color: var(--color-black);
+}
+
+.accordion-header .arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.accordion-header.active .arrow {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 20px;
+}
+
+.accordion-content.open {
+  display: block;
+}
+
+.accordion-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+/* ==========================================================
    FANZINE PAGE
    ========================================================== */
 
