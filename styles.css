@@ -621,21 +621,20 @@ img {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.accordion-pink { border-color: var(--color-pink); }
-.accordion-green { border-color: var(--color-green); }
-.accordion-red { border-color: var(--color-red); }
-
-.accordion-pink .accordion-header:hover {
+.accordion-pink .accordion-header:hover,
+.accordion-pink .accordion-header.active {
   background: var(--color-pink);
   color: var(--color-black);
 }
 
-.accordion-green .accordion-header:hover {
+.accordion-green .accordion-header:hover,
+.accordion-green .accordion-header.active {
   background: var(--color-green);
   color: var(--color-white);
 }
 
-.accordion-red .accordion-header:hover {
+.accordion-red .accordion-header:hover,
+.accordion-red .accordion-header.active {
   background: var(--color-red);
   color: var(--color-white);
 }
